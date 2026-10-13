@@ -164,3 +164,55 @@
   }
 }
 
+/* Keep the brand, utilities, and menu toggle in separate mobile grid columns. */
+@media (max-width: 760px) {
+  .navbar {
+    grid-template-columns: minmax(0, 1fr) auto auto;
+    gap: 5px;
+  }
+  .brand {
+    grid-column: 1;
+    grid-row: 1;
+    min-width: 0;
+    gap: 6px;
+    padding: 2px;
+    overflow: hidden;
+  }
+  .brand-logo {
+    width: 34px;
+    height: 34px;
+    flex-basis: 34px;
+  }
+  .brand-name {
+    overflow: hidden;
+    font-size: 12px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .nav-actions.nav-utilities {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: end;
+    gap: 3px;
+  }
+  .theme-toggle {
+    width: 38px;
+    flex-basis: 38px;
+  }
+  .theme-toggle[aria-pressed="true"] .theme-toggle-circle,
+  .theme-toggle[aria-pressed="true"] .theme-icon {
+    transform: translateX(6px);
+  }
+  .language-btn { width: 40px; }
+  .nav-separator { display: none; }
+  .nav-actions .login-btn {
+    padding: 7px 8px;
+    font-size: 10px;
+  }
+  .menu-toggle {
+    grid-column: 3;
+    grid-row: 1;
+    width: 36px;
+    height: 36px;
+  }
+}
