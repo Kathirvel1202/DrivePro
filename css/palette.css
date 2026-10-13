@@ -172,3 +172,42 @@ body:not(.dark-mode) .portal-kpi-icon{background:#fff0db;color:#99652e}
 
 /* Keep the hero badge on the reading-direction edge. */
 .hero-stamp{right:auto;left:auto;inset-inline-end:5%}
+
+/* Shared, restrained interaction for the feature cards used across public pages. */
+.feature-item{position:relative;transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease,background-color .22s ease}
+.feature-item .feature-symbol{transition:transform .22s ease,background-color .22s ease,color .22s ease}
+@media(hover:hover){.feature-item:hover{transform:translateY(-4px);border-color:var(--orange-dark);box-shadow:0 14px 30px rgba(42,73,68,.14)}.dark-mode .feature-item:hover{box-shadow:0 16px 32px rgba(0,0,0,.32),0 0 0 1px rgba(240,166,66,.12)}}
+.feature-item:focus-within{transform:translateY(-3px);border-color:var(--orange-dark);box-shadow:0 12px 26px rgba(42,73,68,.13)}
+.feature-item:hover .feature-symbol,.feature-item:focus-within .feature-symbol{transform:scale(1.06);background:var(--orange-dark);color:#fff}
+@media(prefers-reduced-motion:reduce){.feature-item,.feature-item .feature-symbol{transition:none}.feature-item:hover,.feature-item:focus-within{transform:none}}
+
+.map-location{display:grid;gap:14px}
+.map-location iframe{display:block;width:100%;min-height:320px;border:1px solid var(--gold-border);border-radius:20px;box-shadow:var(--card-shadow)}
+.map-location .button{justify-self:start}
+@media(max-width:600px){.map-location iframe{min-height:260px}}
+
+/* Keep the banner crop consistent across all marketing pages. */
+.hero{height:100svh;min-height:640px;max-height:960px}
+@media(max-width:760px){.hero{height:100svh;min-height:600px;max-height:820px}}
+
+/* Shared card interactions across the course, journal, and dashboard pages. */
+.card,.step-card,.stat-card,.quote,.dashboard-card,.portal-summary-card,.portal-kpi{transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease,background-color .22s ease}
+@media(hover:hover){.card:hover,.step-card:hover,.stat-card:hover,.quote:hover,.dashboard-card:hover,.portal-summary-card:hover,.portal-kpi:hover{transform:translateY(-5px);border-color:var(--orange-dark);box-shadow:0 16px 32px rgba(42,73,68,.14)}.dark-mode .card:hover,.dark-mode .step-card:hover,.dark-mode .stat-card:hover,.dark-mode .quote:hover,.dark-mode .dashboard-card:hover,.dark-mode .portal-summary-card:hover,.dark-mode .portal-kpi:hover{box-shadow:0 16px 34px rgba(0,0,0,.34),0 0 0 1px rgba(240,166,66,.12)}}
+.card:focus-within,.step-card:focus-within,.stat-card:focus-within,.quote:focus-within,.dashboard-card:focus-within,.portal-summary-card:focus-within,.portal-kpi:focus-within{transform:translateY(-3px);border-color:var(--orange-dark);box-shadow:0 12px 26px rgba(42,73,68,.13)}
+@media(prefers-reduced-motion:reduce){.card,.step-card,.stat-card,.quote,.dashboard-card,.portal-summary-card,.portal-kpi{transition:none}.card:hover,.card:focus-within,.step-card:hover,.step-card:focus-within,.stat-card:hover,.stat-card:focus-within,.quote:hover,.quote:focus-within,.dashboard-card:hover,.dashboard-card:focus-within,.portal-summary-card:hover,.portal-summary-card:focus-within,.portal-kpi:hover,.portal-kpi:focus-within{transform:none}}
+
+/* Alternate section surfaces across every page and theme. */
+.section:not(.hero):not(.section-alt){background:var(--section-one)!important;color:var(--ink)}
+.section.section-alt:not(.hero){background:var(--section-two)!important;color:var(--ink)}
+.dark-mode .section:not(.hero):not(.section-alt){background:var(--section-one)!important;color:var(--ink)}
+.dark-mode .section.section-alt:not(.hero){background:var(--section-two)!important;color:var(--ink)}
+.section + .section:not(.hero){padding-top:48px}
+.price-label small{display:block;font-size:12px;font-weight:600;opacity:.85}
+.pricing-note a{color:var(--orange-dark);font-weight:700}
+
+
+.section.dark .section-heading h2{color:var(--brown)!important}
+.section.dark .section-heading p:not(.eyebrow){color:var(--muted)!important}
+.dark-mode .section.dark .section-heading h2{color:var(--brown)!important}
+.dark-mode .section.dark .section-heading p:not(.eyebrow){color:var(--muted)!important}
+

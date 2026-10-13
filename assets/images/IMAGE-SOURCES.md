@@ -17,3 +17,8 @@ Pexels photo pages and creator credits:
 - **asset/images/vehicles/car-urban.jpg** — [Car travelling through an urban road](https://www.pexels.com/photo/white-car-driving-on-a-road-in-a-city-18884662/) — Photo by Swapnil Sharma on Pexels.
 - **asset/images/courses/scenic-drive.jpg** — [Road view from inside a car](https://www.pexels.com/photo/car-interior-on-road-8437309/) — Photo by Carla Schizzi on Pexels.
 - **asset/images/courses/road-trip.jpg** — [Car driving along a scenic road](https://www.pexels.com/photo/a-car-driving-on-the-road-3886669/) — Photo by Magda Ehlers on Pexels.
+- **asset/images/courses/motorcycle-training.jpg** — [Motorcyclist navigating an outdoor course](https://www.pexels.com/photo/motorcyclist-navigating-outdoor-course-30544227/) — Pexels.
+- **asset/images/courses/motorcycle-practice.jpg** — [Motorcyclist practising manoeuvres](https://www.pexels.com/photo/motorcyclist-practicing-maneuvers-in-open-area-30544234/) — Pexels.
+- **asset/images/courses/motorcycle-safety.jpg** — [Urban motorcycle training course](https://www.pexels.com/photo/urban-motorcycle-training-course-in-action-34888554/) — Pexels.
+- **asset/images/home/practice-focus.jpg** — [Driver hands on steering wheel](https://www.pexels.com/photo/driver-hands-on-steering-wheel-14959638/) — Pexels.
+- **asset/images/home/driving-school-vehicles.jpg** — [Driving school vehicles with learning sign](https://www.pexels.com/photo/driving-school-vehicle-with-learning-sign-37112146/) — Pexels.

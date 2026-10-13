@@ -13,7 +13,12 @@ $items = @(
     @{ Path = "asset/images/instructors/learner-focus.jpg"; Url = "https://images.pexels.com/photos/9518246/pexels-photo-9518246.jpeg?auto=compress&cs=tinysrgb&w=1800" },
     @{ Path = "asset/images/vehicles/car-urban.jpg"; Url = "https://images.pexels.com/photos/18884662/pexels-photo-18884662.jpeg?auto=compress&cs=tinysrgb&w=1800" },
     @{ Path = "asset/images/courses/scenic-drive.jpg"; Url = "https://images.pexels.com/photos/8437309/pexels-photo-8437309.jpeg?auto=compress&cs=tinysrgb&w=1800" },
-    @{ Path = "asset/images/courses/road-trip.jpg"; Url = "https://images.pexels.com/photos/3886669/pexels-photo-3886669.jpeg?auto=compress&cs=tinysrgb&w=1800" }
+    @{ Path = "asset/images/courses/road-trip.jpg"; Url = "https://images.pexels.com/photos/3886669/pexels-photo-3886669.jpeg?auto=compress&cs=tinysrgb&w=1800" },
+    @{ Path = "asset/images/courses/motorcycle-training.jpg"; Url = "https://images.pexels.com/photos/30544227/pexels-photo-30544227.jpeg?auto=compress&cs=tinysrgb&w=1400" },
+    @{ Path = "asset/images/courses/motorcycle-practice.jpg"; Url = "https://images.pexels.com/photos/30544234/pexels-photo-30544234.jpeg?auto=compress&cs=tinysrgb&w=1400" },
+    @{ Path = "asset/images/courses/motorcycle-safety.jpg"; Url = "https://images.pexels.com/photos/34888554/pexels-photo-34888554.jpeg?auto=compress&cs=tinysrgb&w=1400" },
+    @{ Path = "asset/images/home/practice-focus.jpg"; Url = "https://images.pexels.com/photos/14959638/pexels-photo-14959638.jpeg?auto=compress&cs=tinysrgb&w=1400" },
+    @{ Path = "asset/images/home/driving-school-vehicles.jpg"; Url = "https://images.pexels.com/photos/37112146/pexels-photo-37112146.jpeg?auto=compress&cs=tinysrgb&w=1400" }
 )
 foreach ($item in $items) {
     $destination = Join-Path $root $item.Path
