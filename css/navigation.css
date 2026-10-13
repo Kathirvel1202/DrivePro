@@ -144,3 +144,23 @@
 @media (prefers-reduced-motion: reduce) {
   .nav-dropdown > .dropdown-menu { transition: none; }
 }
+
+/* Keep the expanded mobile navigation opaque over page content. */
+@media (max-width: 1180px) {
+  .nav-links {
+    z-index: 1100;
+    isolation: isolate;
+    background-color: var(--surface-raised, #fff) !important;
+    opacity: 1;
+  }
+  .dark-mode .nav-links {
+    background-color: var(--surface-raised, #27333d) !important;
+  }
+  .nav-dropdown > .dropdown-menu {
+    background-color: var(--surface-raised, #fff) !important;
+  }
+  .dark-mode .nav-dropdown > .dropdown-menu {
+    background-color: var(--surface-raised, #27333d) !important;
+  }
+}
+
