@@ -27,8 +27,9 @@ document.addEventListener('DOMContentLoaded',()=>{
     document.addEventListener('click',e=>{if(!portalSidebar.contains(e.target)&&!portalMenuToggle.contains(e.target))closePortalMenu();});
     document.addEventListener('keydown',e=>{if(e.key==='Escape')closePortalMenu();});
   }
-  // Local-first Pexels images. If the image pack has not yet been downloaded, use the Pexels CDN source.
-  document.querySelectorAll('img[data-fallback]').forEach(img=>{img.addEventListener('error',()=>{if(img.dataset.fallback&&img.src!==img.dataset.fallback){img.src=img.dataset.fallback;}},{once:true});});
+  document.querySelectorAll('.portal-logout').forEach(link=>link.addEventListener('click',()=>{
+    try{sessionStorage.removeItem('drivepro-current-user');}catch{}
+  }));
   document.querySelectorAll('.faq-question').forEach(btn=>btn.addEventListener('click',()=>{const item=btn.closest('.faq-item');const open=item.classList.toggle('open');btn.setAttribute('aria-expanded',String(open));}));
   const eyeIcon=struck=>`<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/>${struck?'<path d="m3 3 18 18"/>':''}</svg>`;
   document.querySelectorAll('[data-password-toggle]').forEach(btn=>{btn.innerHTML=eyeIcon(true);btn.addEventListener('click',()=>{const input=document.getElementById(btn.dataset.passwordToggle);if(!input)return;const reveal=input.type==='password';input.type=reveal?'text':'password';btn.innerHTML=eyeIcon(!reveal);btn.setAttribute('aria-pressed',String(reveal));btn.setAttribute('aria-label',reveal?'Hide password':'Show password');});});
@@ -40,8 +41,28 @@ document.addEventListener('DOMContentLoaded',()=>{
   courseSearch?.addEventListener('input',filterCourses);filters.forEach(btn=>btn.addEventListener('click',()=>{activeFilter=btn.dataset.courseFilter;filters.forEach(b=>b.classList.toggle('active',b===btn));filterCourses();}));
   const instructorSearch=document.querySelector('[data-instructor-search]');
   instructorSearch?.addEventListener('input',()=>{document.querySelectorAll('[data-instructor-card]').forEach(card=>card.classList.toggle('hidden',!card.textContent.toLowerCase().includes(instructorSearch.value.toLowerCase().trim())));});
-  // Keep presentation-only forms local; no authentication service is connected.
-  document.querySelectorAll('[data-visual-form]').forEach(form=>form.addEventListener('submit',e=>{e.preventDefault();}));
+  document.querySelectorAll('[data-auth-form]').forEach(form=>form.addEventListener('submit',event=>{
+    event.preventDefault();
+    if(!form.reportValidity())return;
+    const values=Object.fromEntries(new FormData(form).entries());
+    const status=form.querySelector('[data-auth-status]');
+    const email=String(values.email||'').trim().toLowerCase();
+    try{
+      const accounts=JSON.parse(localStorage.getItem('drivepro-accounts')||'{}')||{};
+      if(form.dataset.authForm==='register'){
+        if(accounts[email]){if(status)status.textContent='An account with this email already exists. Sign in instead.';return;}
+        accounts[email]={name:values.name,phone:values.phone,course:values.course};
+        localStorage.setItem('drivepro-accounts',JSON.stringify(accounts));
+      }else if(!accounts[email]){
+        if(status)status.textContent='We could not find an account with that email. Create an account to continue.';
+        return;
+      }
+      sessionStorage.setItem('drivepro-current-user',JSON.stringify({email,name:accounts[email]?.name||email.split('@')[0],role:'student'}));
+      location.href='student-dashboard.html';
+    }catch{
+      if(status)status.textContent='Your browser could not save this account. Check browser storage settings and try again.';
+    }
+  }));
   const contactForm=document.querySelector('[data-contact-form]');
   if(contactForm){contactForm.addEventListener('submit',e=>{e.preventDefault();if(!contactForm.reportValidity())return;const status=contactForm.querySelector('[data-form-status]');if(status)status.textContent='Your entries passed local validation, but no message was sent because a delivery service is not connected.';});}
   document.querySelectorAll('[data-disabled-action]').forEach(el=>{el.addEventListener('click',e=>e.preventDefault());});
