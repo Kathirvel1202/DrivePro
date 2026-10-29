@@ -3,10 +3,10 @@
   --cream:#f7f8f6;
   --white:#ffffff;
   --ink:#293746;
-  --muted:#697888;
+  --muted:#566674;
   --brown:#334b5c;
-  --orange:#bd8a55;
-  --orange-dark:#946d42;
+  --orange:#875b31;
+  --orange-dark:#80572f;
   --gold-border:#e3e9e7;
   --soft-orange:#f3eee7;
   --card-shadow:0 12px 30px rgba(48,67,79,.08);
@@ -172,6 +172,90 @@ body:not(.dark-mode) .portal-kpi-icon{background:#fff0db;color:#99652e}
 
 /* Keep the hero badge on the reading-direction edge. */
 .hero-stamp{right:auto;left:auto;inset-inline-end:5%}
+
+/* Footer colors remain readable across both theme palettes. */
+body:not(.dark-mode) .site-footer {
+  background: #eef4f8;
+  color: #42576a;
+}
+
+body:not(.dark-mode) .site-footer .footer-portals h2 {
+  color: #173b5b;
+}
+
+body:not(.dark-mode) .site-footer .footer-portal-btn {
+  border-color: #d3dfe8;
+  background: #fff;
+  color: #173b5b;
+}
+
+body:not(.dark-mode) .site-footer .footer-portal-btn span {
+  color: #173b5b;
+}
+
+body:not(.dark-mode) .site-footer .footer-portal-btn small {
+  color: #526b80;
+}
+
+body:not(.dark-mode) .site-footer .footer-portal-btn:hover {
+  background: #e5edf4;
+}
+
+.footer-socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.footer-socials a {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border: 1px solid var(--gold-border);
+  border-radius: 12px;
+  background: var(--surface);
+  color: var(--brown);
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+  transition: transform .2s, background .2s, color .2s;
+}
+
+.footer-socials a:hover {
+  transform: translateY(-2px);
+  background: var(--section-three);
+  color: var(--orange-dark);
+}
+
+.footer-socials svg {
+  width: 22px;
+  height: 22px;
+}
+
+.dark-mode .site-footer .footer-portal-btn {
+  border-color: var(--gold-border);
+  background: var(--surface-raised);
+  color: var(--ink);
+}
+
+.dark-mode .site-footer .footer-portal-btn span {
+  color: #f1f5f9;
+}
+
+.dark-mode .site-footer .footer-portal-btn small,
+.dark-mode .footer-socials a {
+  border-color: var(--gold-border);
+  background: var(--surface);
+  color: var(--ink);
+}
+
+.dark-mode .footer-socials a:hover {
+  background: #3b4954;
+  color: #fff;
+}
 
 /* Shared, restrained interaction for the feature cards used across public pages. */
 .feature-item{position:relative;transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease,background-color .22s ease}

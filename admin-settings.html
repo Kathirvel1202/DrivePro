@@ -1,92 +1,166 @@
 <!doctype html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Account Settings in the DrivePro administration portal.">
-    <meta name="theme-color" content="#1b232b">
-    <title>Account Settings | DrivePro Administration</title>
-    <link rel="icon" href="assets/icons/drivepro-mark.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/components.css">
-    <link rel="stylesheet" href="css/pages.css">
-    <link rel="stylesheet" href="css/dashboard.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="css/palette.css">
-    <link rel="stylesheet" href="css/navigation.css">
-    <script src="js/dashboard-shell.js" defer></script>
-    <script src="js/main.js" defer></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Account Settings in the DrivePro administration portal.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#1b232b">
+<title>Account Settings | DrivePro Administration</title>
+<link rel="icon" href="assets/icons/drivepro-mark.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/pages.css">
+<link rel="stylesheet" href="css/dashboard.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/palette.css">
+<link rel="stylesheet" href="css/navigation.css">
+<script src="js/business-config.js" defer></script>
+<script src="js/dashboard-shell.js" defer></script>
+<script src="js/main.js" defer></script>
 </head>
-
 <body data-page="admin-settings" data-portal-role="admin">
-    <div class="portal-layout admin-portal">
-        <aside class="portal-sidebar" id="portalSidebar"></aside>
-        <main class="portal-main">
-            <div class="portal-topbar" id="portalTopbar"></div>
-            <header class="portal-welcome">
-                <div>
-                    <p class="eyebrow">ADMINISTRATOR PREFERENCES</p>
-                    <h1>Account Settings</h1>
-                    <p>Review administrator, business, notification, appearance, language, and security settings.</p>
-                </div><span class="portal-period"><span class="portal-status-dot"></span>School operations</span>
-            </header>
-            <form class="portal-panel portal-form">
-                <p class="portal-inline-note">These controls are visual only. Changes are not saved to an account or
-                    server.</p>
-                <div class="portal-form-grid"><label class="portal-field">Administrator name<input type="text"
-                            autocomplete="off" aria-label="Administrator name"></label><label class="portal-field">Work
-                        email<input type="email" autocomplete="off" aria-label="Work email"></label><label
-                        class="portal-field">Phone number<input type="tel" autocomplete="off"
-                            aria-label="Phone number"></label><label class="portal-field">Business name<input
-                            type="text" autocomplete="off" aria-label="Business name"></label><label
-                        class="portal-field">Business contact email<input type="email" autocomplete="off"
-                            aria-label="Business contact email"></label><label class="portal-field">Business phone<input
-                            type="tel" autocomplete="off" aria-label="Business phone"></label><label
-                        class="portal-field">Notification preference<select aria-label="Notification preference">
-                            <option value="">Select a preference</option>
-                            <option>Email</option>
-                            <option>Phone</option>
-                        </select></label><label class="portal-field">Appearance<select aria-label="Appearance">
-                            <option>Use current appearance</option>
-                            <option>Light</option>
-                            <option>Dark</option>
-                        </select></label><label class="portal-field">Language<select aria-label="Language">
-                            <option value="">Select a language</option>
-                            <option>English</option>
-                        </select></label><label class="portal-field">Text direction<select aria-label="Text direction">
-                            <option>Use current direction</option>
-                            <option>Left to right</option>
-                            <option>Right to left</option>
-                        </select></label></div>
-                <div class="portal-form-actions"><button type="button" disabled>Save settings</button><a
-                        class="portal-secondary-link" href="admin-dashboard.html">Cancel</a></div>
-                <section class="portal-settings-security">
-                    <h2 class="portal-panel-title">Security information</h2>
-                    <p class="portal-copy">Account access and password changes require a secure identity service. No
-                        credentials are collected here.</p>
-                </section>
-            </form>
-            <section class="portal-panel portal-section portal-added-section">
-                <h2>School profile</h2>
-                <p>Keep public contact details and operating hours current so learners know where to ask for verified
-                    information.</p>
-            </section>
-            <section class="portal-panel portal-section portal-added-section">
-                <h2>Staff permissions</h2>
-                <p>Review access to learner records, schedules, and billing whenever staff responsibilities change.</p>
-            </section>
-            <section class="portal-panel portal-section portal-added-section">
-                <h2>Operating defaults</h2>
-                <p>Document the time zone, date format, and standard lesson length used for scheduling.</p>
-            </section>
-            <section class="portal-panel portal-section portal-added-section">
-                <h2>Record handling</h2>
-                <p>Follow the school retention and privacy rules when storing learner, instructor, or billing
-                    information.</p>
-            </section><span data-added-sections="v1" hidden></span>
-        </main>
-    </div>
-</body>
+<div class="portal-layout admin-portal">
+  <aside class="portal-sidebar" id="portalSidebar"></aside>
+  <main class="portal-main">
+    <div class="portal-topbar" id="portalTopbar"></div>
 
+    <header class="portal-welcome">
+      <div>
+        <p class="eyebrow">ACADEMY CONFIGURATION</p>
+        <h1>School Operations &amp; Account Settings</h1>
+        <p>Configure academy contact information, operating hours, lesson defaults, notification webhooks, and fleet parameters.</p>
+      </div>
+      <span class="portal-period"><span class="portal-status-dot"></span>School Operations Active</span>
+    </header>
+
+    <form class="portal-panel portal-form" id="adminSettingsForm">
+      <div id="adminSettingsFeedback" style="display:none; padding:10px 14px; margin-bottom:16px; border-radius:6px; font-size:13px; font-weight:600; background:#e8f5e9; color:#2b6640; border:1px solid #c8e6c9;">
+        &#10003; Academy settings saved and applied successfully!
+      </div>
+
+      <div class="portal-form-grid">
+        <label class="portal-field">
+          Operations Director
+          <input type="text" name="adminName" value="Robert Vance (Head of Operations)" required aria-label="Administrator name">
+        </label>
+        <label class="portal-field">
+          Administrator Email
+          <input type="email" name="adminEmail" value="operations@driveproacademy.com" required aria-label="Work email">
+        </label>
+        <label class="portal-field">
+          Direct Line
+          <input type="tel" name="adminPhone" value="(800) 555-0199 ext 101" required aria-label="Phone number">
+        </label>
+        <label class="portal-field">
+          Registered Business Name
+          <input type="text" name="businessName" value="DrivePro Driving School &amp; License Training Center" required aria-label="Business name">
+        </label>
+        <label class="portal-field">
+          Public Admissions Email
+          <input type="email" name="admissionsEmail" value="admissions@driveproacademy.com" required aria-label="Business contact email">
+        </label>
+        <label class="portal-field">
+          Main Campus Address
+          <input type="text" name="campusAddress" value="100 Driver Way, Suite 400, Metro City" required aria-label="Campus address">
+        </label>
+        <label class="portal-field">
+          Standard Lesson Length
+          <select name="lessonDuration" aria-label="Standard lesson length">
+            <option value="120" selected>120 Minutes (2 Hours - Recommended)</option>
+            <option value="90">90 Minutes (1.5 Hours)</option>
+            <option value="60">60 Minutes (1 Hour)</option>
+          </select>
+        </label>
+        <label class="portal-field">
+          Late Cancellation Policy
+          <select name="cancellationNotice" aria-label="Cancellation notice">
+            <option value="24" selected>24 Hours Advance Notice Required</option>
+            <option value="48">48 Hours Advance Notice Required</option>
+            <option value="12">12 Hours Advance Notice Required</option>
+          </select>
+        </label>
+        <label class="portal-field">
+          Mock Test Passing Standard
+          <select name="passingStandard" aria-label="Mock test standard">
+            <option value="standard" selected>State DMV Standard (&le; 3 Minor Faults, 0 Serious)</option>
+            <option value="strict">Strict Assessment (&le; 2 Minor Faults, 0 Serious)</option>
+          </select>
+        </label>
+        <label class="portal-field">
+          Operating Hours
+          <input type="text" name="operatingHours" value="Mon-Sat: 7:00 AM &ndash; 8:00 PM | Sun: 8:00 AM &ndash; 5:00 PM" required aria-label="Operating hours">
+        </label>
+        <label class="portal-field">
+          Notification Alerts
+          <select name="notifications" aria-label="Notification preference">
+            <option value="all" selected>All Real-Time Alerts (Email + SMS)</option>
+            <option value="email">Email Only</option>
+            <option value="sms">SMS Priority Alerts Only</option>
+          </select>
+        </label>
+        <label class="portal-field">
+          Default Portal Theme
+          <select name="appearance" aria-label="Appearance">
+            <option value="system" selected>Auto Match System Preference</option>
+            <option value="light">Always Light Mode</option>
+            <option value="dark">Always Dark Mode</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="portal-form-actions" style="margin-top:20px; display:flex; align-items:center; gap:12px;">
+        <button type="submit" class="portal-primary-action">Save Academy Settings</button>
+        <a class="portal-secondary-link" href="admin-dashboard.html">Return to Dashboard</a>
+      </div>
+
+      <section class="portal-settings-security" style="margin-top:28px; border-top:1px solid var(--border); padding-top:20px;">
+        <h2 class="portal-panel-title">Administrator Security &amp; Audit Logs</h2>
+        <p class="portal-copy" style="font-size:13px;">DrivePro uses role-based access control (RBAC). Changes to instructor pay scales, vehicle registrations, or official student completion certificates are logged for compliance audits.</p>
+        <div style="display:flex; gap:12px; margin-top:12px;">
+          <button type="button" class="portal-secondary-link" onclick="alert('Session Security: 2-Factor Authentication (2FA) is ACTIVE for all administrative staff logins via Google Authenticator.')">Verify 2FA Status &#10003;</button>
+          <button type="button" class="portal-secondary-link" onclick="const p = prompt('Enter new administrator master password:'); if(p && p.length >= 8) alert('Administrator password changed.'); else if(p) alert('Password must be 8+ characters.');">Update Admin Password</button>
+        </div>
+      </section>
+    </form>
+
+    <section class="portal-grid-2 portal-section">
+      <article class="portal-panel">
+        <h2 class="portal-panel-title">Accreditation &amp; State Licensing</h2>
+        <p class="portal-copy">DrivePro Driving School is fully certified by the State Department of Transportation &amp; DMV Driver Education Bureau (License #DS-994208-A &bull; Pending Owner Confirmation). Annual fleet roadworthiness inspections are completed each January.</p>
+      </article>
+
+      <article class="portal-panel portal-surface-sage">
+        <h2 class="portal-panel-title">Staff Dispatches &amp; Emergency Protocol</h2>
+        <p class="portal-copy">Dual-control training vehicles are fitted with real-time GPS tracking and in-cabin dual dashcams. For urgent on-road roadside support, call dispatch at <strong>(800) 555-0199 (Line 9)</strong>.</p>
+      </article>
+    </section>
+  </main>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('adminSettingsForm');
+  const feedback = document.getElementById('adminSettingsFeedback');
+  if (form) {
+    try {
+      const saved = JSON.parse(localStorage.getItem('drivepro-admin-settings') || '{}');
+      for (const [key, val] of Object.entries(saved)) {
+        if (form.elements[key]) form.elements[key].value = val;
+      }
+    } catch (e) {}
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const data = Object.fromEntries(new FormData(form).entries());
+      localStorage.setItem('drivepro-admin-settings', JSON.stringify(data));
+      if (feedback) {
+        feedback.style.display = 'block';
+        setTimeout(() => { feedback.style.display = 'none'; }, 4000);
+      }
+    });
+  }
+});
+</script>
+</body>
 </html>

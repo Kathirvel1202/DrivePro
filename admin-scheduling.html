@@ -1,1 +1,157 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Lesson Scheduling in the DrivePro administration portal."><meta name="theme-color" content="#1b232b"><title>Lesson Scheduling | DrivePro Administration</title><link rel="icon" href="assets/icons/drivepro-mark.svg" type="image/svg+xml"><link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/components.css"><link rel="stylesheet" href="css/pages.css"><link rel="stylesheet" href="css/dashboard.css"><link rel="stylesheet" href="css/responsive.css"><link rel="stylesheet" href="css/palette.css"><link rel="stylesheet" href="css/navigation.css"><script src="js/dashboard-shell.js" defer></script><script src="js/main.js" defer></script></head><body data-page="admin-scheduling" data-portal-role="admin"><div class="portal-layout admin-portal"><aside class="portal-sidebar" id="portalSidebar"></aside><main class="portal-main"><div class="portal-topbar" id="portalTopbar"></div><header class="portal-welcome"><div><p class="eyebrow">SCHOOL CALENDAR</p><h1>Lesson Scheduling</h1><p>Review lesson schedules and availability across students, instructors, and vehicles.</p></div><span class="portal-period"><span class="portal-status-dot"></span>School operations</span></header><section class="portal-panel"><div class="portal-report-controls"><span>Calendar view</span><button type="button" disabled>Daily</button><button type="button" disabled>Weekly</button><button type="button" disabled>Monthly</button><button type="button" disabled>Schedule lesson</button></div><div class="portal-calendar-empty"><div class="portal-empty"><span class="portal-empty-icon" aria-hidden="true">◷</span><strong>Calendar unavailable</strong><span>Connect an authorised scheduling service to display dates. No lessons are booked here.</span></div></div></section><section class="portal-grid-2 portal-section"><article class="portal-panel portal-surface-sage"><h2 class="portal-panel-title">Instructor availability</h2><div class="portal-empty"><span class="portal-empty-icon" aria-hidden="true">♧</span><strong>No availability records</strong><span>Instructor availability is not connected.</span></div></article><article class="portal-panel portal-surface-blue"><h2 class="portal-panel-title">Vehicle availability</h2><div class="portal-empty"><span class="portal-empty-icon" aria-hidden="true">▣</span><strong>No vehicle schedule</strong><span>Vehicle availability requires connected fleet and lesson records.</span></div></article></section><section class="portal-section"><div class="portal-section-heading"><div><h2>Lesson Schedule</h2><p>No schedule records are available.</p></div></div><div class="portal-table-wrap"><table class="portal-table"><thead><tr><th scope="col">Date</th><th scope="col">Time</th><th scope="col">Student</th><th scope="col">Instructor</th><th scope="col">Vehicle</th><th scope="col">Status</th></tr></thead><tbody><tr><td class="portal-empty-row" colspan="6">No lessons are scheduled.</td></tr></tbody></table></div></section><section class="portal-grid-2 portal-section"><article class="portal-panel"><h2 class="portal-panel-title">Scheduling conflicts</h2><div class="portal-empty"><span class="portal-empty-icon" aria-hidden="true">!</span><strong>Conflict analysis unavailable</strong><span>Conflict detection requires a connected schedule and availability records.</span></div></article><article class="portal-panel"><h2 class="portal-panel-title">Rescheduling and cancellations</h2><p class="portal-copy">Confirm school policy and notify affected learners. This interface does not modify bookings.</p><button class="portal-disabled-action" type="button" disabled>Reschedule / cancel unavailable</button></article></section><section class="portal-panel portal-section portal-added-section"><h2>Daily planning notes</h2><p>Group lesson requests by time and training category, then check instructor and vehicle availability before confirming changes.</p></section><span data-added-sections="v1" hidden></span></main></div></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Lesson Scheduling in the DrivePro administration portal.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#1b232b">
+<title>Lesson Scheduling | DrivePro Administration</title>
+<link rel="icon" href="assets/icons/drivepro-mark.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/pages.css">
+<link rel="stylesheet" href="css/dashboard.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/palette.css">
+<link rel="stylesheet" href="css/navigation.css">
+<script src="js/business-config.js" defer></script>
+<script src="js/dashboard-shell.js" defer></script>
+<script src="js/main.js" defer></script>
+</head>
+<body data-page="admin-scheduling" data-portal-role="admin">
+<div class="portal-layout admin-portal">
+  <aside class="portal-sidebar" id="portalSidebar"></aside>
+  <main class="portal-main">
+    <div class="portal-topbar" id="portalTopbar"></div>
+
+    <header class="portal-welcome">
+      <div>
+        <p class="eyebrow">LESSON DISPATCH &amp; CALENDAR</p>
+        <h1>Lesson Scheduling</h1>
+        <p>Review active lesson slots, instructor assignments, doorstep pickup dispatches, and official road test bookings.</p>
+      </div>
+      <span class="portal-period"><span class="portal-status-dot"></span>48 Sessions This Week</span>
+    </header>
+
+    <!-- Controls -->
+    <section class="portal-panel">
+      <div class="portal-report-controls">
+        <label>Filter Day: 
+          <select>
+            <option>Today &amp; Tomorrow (16)</option>
+            <option>This Full Week (48)</option>
+            <option>Upcoming Weekend (20)</option>
+          </select>
+        </label>
+        <label>Instructor: 
+          <select>
+            <option>All Instructors</option>
+            <option>David Miller</option>
+            <option>Sarah Jenkins</option>
+            <option>Marcus Vance</option>
+            <option>Elena Rostova</option>
+            <option>James Thornton</option>
+            <option>Priya Sharma</option>
+          </select>
+        </label>
+        <label>Status: 
+          <select>
+            <option>All Statuses</option>
+            <option>Confirmed</option>
+            <option>In Progress</option>
+            <option>Completed</option>
+          </select>
+        </label>
+      </div>
+    </section>
+
+    <!-- Schedule Table -->
+    <section class="portal-section">
+      <div class="portal-section-heading">
+        <div>
+          <h2>Active Lesson Dispatch Schedule</h2>
+          <p>Upcoming 1-on-1 dual-control practical sessions.</p>
+        </div>
+      </div>
+
+      <div class="portal-table-wrap">
+        <table class="portal-table">
+          <thead>
+            <tr>
+              <th scope="col">Date &amp; Time</th>
+              <th scope="col">Learner</th>
+              <th scope="col">Instructor</th>
+              <th scope="col">Vehicle</th>
+              <th scope="col">Lesson Topic / Focus</th>
+              <th scope="col">Pickup Location</th>
+              <th scope="col">Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Oct 30 · 09:00 AM</strong><br><small style="color:var(--muted)">2 Hours</small></td>
+              <td>Alex Morgan</td>
+              <td>David Miller</td>
+              <td>VW Golf (Manual)</td>
+              <td>Complex Roundabouts &amp; Priority</td>
+              <td>742 Evergreen Terr, West Sector</td>
+              <td><span style="color:#2b6640;font-weight:700;">Confirmed</span></td>
+            </tr>
+            <tr>
+              <td><strong>Oct 30 · 11:30 AM</strong><br><small style="color:var(--muted)">2 Hours</small></td>
+              <td>Chloe Mitchell</td>
+              <td>Sarah Jenkins</td>
+              <td>Toyota Corolla (Auto)</td>
+              <td>Parallel Parking &amp; Bay Maneuvers</td>
+              <td>120 Oakridge Blvd, North Sector</td>
+              <td><span style="color:#2b6640;font-weight:700;">Confirmed</span></td>
+            </tr>
+            <tr>
+              <td><strong>Oct 30 · 02:00 PM</strong><br><small style="color:var(--muted)">2 Hours</small></td>
+              <td>Emma Watson</td>
+              <td>James Thornton</td>
+              <td>Toyota RAV4 (Auto)</td>
+              <td>70mph Dual Carriageway Merging</td>
+              <td>88 Campus Drive, University Area</td>
+              <td><span style="color:#2b6640;font-weight:700;">Confirmed</span></td>
+            </tr>
+            <tr>
+              <td><strong>Oct 30 · 04:30 PM</strong><br><small style="color:var(--muted)">2 Hours</small></td>
+              <td>Liam Turner</td>
+              <td>David Miller</td>
+              <td>VW Golf (Manual)</td>
+              <td>Test-Route Mock Exam #2</td>
+              <td>420 Motorway Blvd (Center)</td>
+              <td><span style="color:#bd8a55;font-weight:700;">Mock Exam</span></td>
+            </tr>
+            <tr>
+              <td><strong>Oct 31 · 10:00 AM</strong><br><small style="color:var(--muted)">Full Day</small></td>
+              <td>Carlos Rodriguez</td>
+              <td>Marcus Vance</td>
+              <td>Honda CB300R</td>
+              <td>Motorcycle CBT Pad &amp; Road Ride</td>
+              <td>Training Ground Closed Pad</td>
+              <td><span style="color:#2b6640;font-weight:700;">Confirmed</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Dispatch & Safety Protocol -->
+    <section class="portal-grid-2 portal-section portal-added-section">
+      <article class="portal-panel portal-surface-sage">
+        <h2 class="portal-panel-title">Doorstep Dispatch &amp; Punctuality</h2>
+        <p class="portal-copy">All instructors arrive at the designated pickup address 5 minutes prior to scheduled start time. Lesson hours are strictly 1-on-1 with no intermediate student shuttling.</p>
+      </article>
+
+      <article class="portal-panel portal-surface-blue">
+        <h2 class="portal-panel-title">Rescheduling &amp; Weather Contingency</h2>
+        <p class="portal-copy">Lessons proceed in normal wet road conditions to develop all-weather skills. Cancellations due to severe storms or ice can be rescheduled at no cost.</p>
+      </article>
+    </section>
+  </main>
+</div>
+</body>
+</html>

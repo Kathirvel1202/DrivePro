@@ -1,1 +1,148 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Driving Progress in the DrivePro student portal."><meta name="theme-color" content="#1b232b"><title>Driving Progress | DrivePro</title><link rel="icon" href="assets/icons/drivepro-mark.svg" type="image/svg+xml"><link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/components.css"><link rel="stylesheet" href="css/pages.css"><link rel="stylesheet" href="css/dashboard.css"><link rel="stylesheet" href="css/responsive.css"><link rel="stylesheet" href="css/palette.css"><link rel="stylesheet" href="css/navigation.css"><script src="js/dashboard-shell.js" defer></script><script src="js/main.js" defer></script></head><body data-page="student-progress" data-portal-role="student"><div class="portal-layout student-portal"><aside class="portal-sidebar" id="portalSidebar"></aside><main class="portal-main"><div class="portal-topbar" id="portalTopbar"></div><header class="portal-welcome"><div><p class="eyebrow">TRAINING RECORDS</p><h1>Driving Progress</h1><p>Follow theory and practical training using verified records from your school.</p></div><span class="portal-period"><span class="portal-status-dot"></span>Student portal</span></header><section class="portal-grid-3"><article class="portal-panel"><h2 class="portal-panel-title">Required Hours</h2><div class="portal-empty"><span class="portal-empty-icon" aria-hidden="true">◷</span><strong>Not available</strong><span>Requirements vary by course and licensing rules.</span></div></article><article class="portal-panel"><h2 class="portal-panel-title">Completed Hours</h2><div class="portal-empty"><span class="portal-empty-icon" aria-hidden="true">◷</span><strong>Not available</strong><span>Hours appear after lesson records are verified.</span></div></article><article class="portal-panel"><h2 class="portal-panel-title">Remaining Hours</h2><div class="portal-empty"><span class="portal-empty-icon" aria-hidden="true">◷</span><strong>Not available</strong><span>Calculated only when requirements and completed records are available.</span></div></article></section><section class="portal-grid-2 portal-section"><article class="portal-panel portal-surface-sage"><h2 class="portal-panel-title">Theory Training</h2><div class="portal-empty"><span class="portal-empty-icon" aria-hidden="true">▤</span><strong>Progress not connected</strong><span>Theory topics and assessments require verified course records.</span></div><div class="portal-progress-track" role="progressbar" aria-label="Theory Training progress unavailable" aria-valuetext="Progress unavailable"><span></span></div></article><article class="portal-panel portal-surface-blue"><h2 class="portal-panel-title">Practical Training</h2><div class="portal-empty"><span class="portal-empty-icon" aria-hidden="true">↗</span><strong>Progress not connected</strong><span>Driving hours and skill assessments require confirmed lesson records.</span></div><div class="portal-progress-track" role="progressbar" aria-label="Practical Training progress unavailable" aria-valuetext="Progress unavailable"><span></span></div></article></section><section class="portal-grid-2 portal-section"><article class="portal-panel"><h2 class="portal-panel-title">Instructor feedback</h2><div class="portal-empty"><span class="portal-empty-icon" aria-hidden="true">♧</span><strong>No feedback available</strong><span>Instructor observations will appear when shared through a connected learning record.</span></div></article><article class="portal-panel portal-surface-sage"><h2 class="portal-panel-title">Milestones and next steps</h2><div class="portal-empty"><span class="portal-empty-icon" aria-hidden="true">→</span><strong>Milestones unavailable</strong><span>Your instructor or school can confirm the next milestone for your course.</span></div></article></section><section class="portal-panel portal-section portal-added-section"><h2>Reflect after practice</h2><p>Note one task that felt easier, one that needs more practice, and a question for your next lesson.</p></section><section class="portal-panel portal-section portal-added-section"><h2>Skills to build over time</h2><p>Develop observation, vehicle control, hazard awareness, and calm decisions through supervised practice.</p></section><span data-added-sections="v1" hidden></span></main></div></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Driving Progress in the DrivePro student portal.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#1b232b">
+<title>Driving Progress | DrivePro Student Portal</title>
+<link rel="icon" href="assets/icons/drivepro-mark.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/pages.css">
+<link rel="stylesheet" href="css/dashboard.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/palette.css">
+<link rel="stylesheet" href="css/navigation.css">
+<script src="js/business-config.js" defer></script>
+<script src="js/dashboard-shell.js" defer></script>
+<script src="js/main.js" defer></script>
+</head>
+<body data-page="student-progress" data-portal-role="student">
+<div class="portal-layout student-portal">
+  <aside class="portal-sidebar" id="portalSidebar"></aside>
+  <main class="portal-main">
+    <div class="portal-topbar" id="portalTopbar"></div>
+
+    <header class="portal-welcome">
+      <div>
+        <p class="eyebrow">COMPETENCY TRACKER</p>
+        <h1>Driving Progress &amp; Milestones</h1>
+        <p>Official State DMV driving skills checklist tracked by your instructor after every practical driving lesson.</p>
+      </div>
+      <span class="portal-period"><span class="portal-status-dot"></span>60% Test Readiness</span>
+    </header>
+
+    <!-- Overall Readiness Card -->
+    <section class="portal-section portal-added-section">
+      <div class="portal-panel portal-surface-blue">
+        <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:14px;">
+          <div>
+            <h2 style="font:700 22px Georgia, serif; color:var(--brown); margin-bottom:4px;">Overall Road Test Preparedness</h2>
+            <p style="color:var(--muted); font-size:13.5px;">12 of 20 practical hours completed &bull; 8 of 12 core competencies signed off by David Miller.</p>
+          </div>
+          <div>
+            <strong style="font-size:26px; color:#2b6640;">60% Complete</strong>
+          </div>
+        </div>
+        <div class="portal-progress-track" style="margin-top:16px;">
+          <span style="width:60%;"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Detailed Skills Checklist -->
+    <section class="portal-section portal-added-section">
+      <div class="portal-section-heading">
+        <div>
+          <h2>Core Driving Competencies Status</h2>
+          <p>Graded in accordance with official practical test assessment criteria.</p>
+        </div>
+      </div>
+
+      <div class="portal-table-wrap">
+        <table class="portal-table">
+          <thead>
+            <tr>
+              <th scope="col">Competency Area</th>
+              <th scope="col">Skill Description</th>
+              <th scope="col">Proficiency Level</th>
+              <th scope="col">Instructor Sign-Off</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>1. Cockpit Drill &amp; Posture</strong></td>
+              <td>Seating, head restraint, mirror angles, and blind spot checks</td>
+              <td><span style="color:#2b6640;font-weight:700;">Proficient &#10003;</span></td>
+              <td>Signed off Oct 14</td>
+            </tr>
+            <tr>
+              <td><strong>2. Controls &amp; Gears</strong></td>
+              <td>Smooth clutch control, upshifting, downshifting, and footbrake</td>
+              <td><span style="color:#2b6640;font-weight:700;">Proficient &#10003;</span></td>
+              <td>Signed off Oct 18</td>
+            </tr>
+            <tr>
+              <td><strong>3. Moving Off &amp; Stopping</strong></td>
+              <td>6-point routine, steep hill starts without roll-back</td>
+              <td><span style="color:#2b6640;font-weight:700;">Proficient &#10003;</span></td>
+              <td>Signed off Oct 26</td>
+            </tr>
+            <tr>
+              <td><strong>4. Junctions &amp; Crossroads</strong></td>
+              <td>MSPSL routine, priority rules, emerging safely onto major roads</td>
+              <td><span style="color:#2b6640;font-weight:700;">Proficient &#10003;</span></td>
+              <td>Signed off Oct 22</td>
+            </tr>
+            <tr>
+              <td><strong>5. Roundabouts</strong></td>
+              <td>Mini-roundabouts, multi-lane spiral positioning, signaling exits</td>
+              <td><span style="color:#bd8a55;font-weight:700;">In Progress (Current Focus)</span></td>
+              <td>Target: Oct 30</td>
+            </tr>
+            <tr>
+              <td><strong>6. Parallel Parking</strong></td>
+              <td>Reverse parallel park within 2 vehicle lengths and 1 foot of curb</td>
+              <td><span style="color:#bd8a55;font-weight:700;">Practicing</span></td>
+              <td>Target: Nov 02</td>
+            </tr>
+            <tr>
+              <td><strong>7. Bay Parking (Forward &amp; Reverse)</strong></td>
+              <td>Accurate parking between two white lines with rearward observations</td>
+              <td><span style="color:#bd8a55;font-weight:700;">Practicing</span></td>
+              <td>Target: Nov 02</td>
+            </tr>
+            <tr>
+              <td><strong>8. Emergency Stop</strong></td>
+              <td>Controlled hard stop under instruction without skidding</td>
+              <td><span style="color:#2b6640;font-weight:700;">Proficient &#10003;</span></td>
+              <td>Signed off Oct 26</td>
+            </tr>
+            <tr>
+              <td><strong>9. Dual Carriageway Merging</strong></td>
+              <td>Joining 70mph traffic via slip road and maintaining 2-second gap</td>
+              <td><span style="color:var(--muted);font-weight:700;">Upcoming</span></td>
+              <td>Target: Nov 06</td>
+            </tr>
+            <tr>
+              <td><strong>10. Independent Driving &amp; Sat-Nav</strong></td>
+              <td>Following road signs and navigation system for 20 minutes</td>
+              <td><span style="color:var(--muted);font-weight:700;">Upcoming</span></td>
+              <td>Target: Nov 09</td>
+            </tr>
+            <tr>
+              <td><strong>11. Test-Route Mock Exam</strong></td>
+              <td>Full 45-minute simulation under strict exam conditions</td>
+              <td><span style="color:var(--muted);font-weight:700;">Upcoming</span></td>
+              <td>Target: Nov 12</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+</div>
+</body>
+</html>

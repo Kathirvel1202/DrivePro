@@ -8,24 +8,33 @@
     ['My Courses', 'student-courses.html', '▤'],
     ['My Lessons', 'student-lessons.html', '◷'],
     ['Driving Progress', 'student-progress.html', '↗'],
-    ['Fees & Invoices', 'student-fees.html', '₹'],
-    ['Profile Settings', 'student-settings.html', '♙'],
+    ['Fees & Invoices', 'student-fees.html', '$'],
+    ['Profile Settings', 'student-settings.html', '⚙'],
   ];
   const adminLinks = [
     ['Overview', 'admin-dashboard.html', '⌂'],
-    ['Student Management', 'admin-students.html', '♙'],
-    ['Instructor Management', 'admin-instructors.html', '♧'],
-    ['Course Management', 'admin-courses.html', '▤'],
-    ['Lesson Scheduling', 'admin-scheduling.html', '◷'],
-    ['Vehicle Management', 'admin-vehicles.html', '▣'],
-    ['Fees & Invoices', 'admin-fees.html', '₹'],
-    ['Reports', 'admin-reports.html', '▥'],
+    ['Student Management', 'admin-students.html', '👥'],
+    ['Instructor Management', 'admin-instructors.html', '🎓'],
+    ['Course Management', 'admin-courses.html', '📋'],
+    ['Lesson Scheduling', 'admin-scheduling.html', '📅'],
+    ['Vehicle Management', 'admin-vehicles.html', '🚗'],
+    ['Fees & Invoices', 'admin-fees.html', '$'],
+    ['Reports', 'admin-reports.html', '📊'],
     ['Account Settings', 'admin-settings.html', '⚙'],
   ];
 
   const admin = role === 'admin';
   const links = admin ? adminLinks : studentLinks;
   const current = location.pathname.split('/').pop() || (admin ? 'admin-dashboard.html' : 'student-dashboard.html');
+  const main = document.querySelector('main');
+  if (main) {
+    main.id = 'main-content';
+    const skipLink = document.createElement('a');
+    skipLink.className = 'skip-link';
+    skipLink.href = '#main-content';
+    skipLink.textContent = 'Skip to main content';
+    body.insertBefore(skipLink, body.firstChild);
+  }
   const sidebar = document.getElementById('portalSidebar');
   const topbar = document.getElementById('portalTopbar');
 
@@ -45,6 +54,14 @@
         <button class="language-btn" id="directionToggle" type="button" aria-label="Switch to right-to-left direction" aria-pressed="false">LTR</button>
       </div>
       <div class="portal-topbar-profile"><span class="portal-avatar" aria-hidden="true">${admin ? '⚙' : '♙'}</span><div class="portal-profile-copy"><strong>${admin ? 'Administrator' : 'Student account'}</strong><span>${admin ? 'School operations' : 'Learning portal'}</span></div></div>`;
+  }
+
+  if (main && topbar) {
+    const portalNotice = document.createElement('p');
+    portalNotice.className = 'portal-inline-note';
+    portalNotice.setAttribute('role', 'note');
+    portalNotice.textContent = 'Portal access is not protected by a secure service. Records are stored only in this browser.';
+    main.insertBefore(portalNotice, topbar.nextSibling);
   }
 
   const appScript = document.createElement('script');

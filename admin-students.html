@@ -1,1 +1,150 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Student Management in the DrivePro administration portal."><meta name="theme-color" content="#1b232b"><title>Student Management | DrivePro Administration</title><link rel="icon" href="assets/icons/drivepro-mark.svg" type="image/svg+xml"><link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/components.css"><link rel="stylesheet" href="css/pages.css"><link rel="stylesheet" href="css/dashboard.css"><link rel="stylesheet" href="css/responsive.css"><link rel="stylesheet" href="css/palette.css"><link rel="stylesheet" href="css/navigation.css"><script src="js/dashboard-shell.js" defer></script><script src="js/main.js" defer></script></head><body data-page="admin-students" data-portal-role="admin"><div class="portal-layout admin-portal"><aside class="portal-sidebar" id="portalSidebar"></aside><main class="portal-main"><div class="portal-topbar" id="portalTopbar"></div><header class="portal-welcome"><div><p class="eyebrow">STUDENT DIRECTORY</p><h1>Student Management</h1><p>Review student contact, enrolment, and training information from an authorised school record system.</p></div><span class="portal-period"><span class="portal-status-dot"></span>School operations</span></header><section class="portal-panel"><div class="portal-report-controls"><label>Search students <input type="search" placeholder="Search directory" disabled></label><label>Enrollment <select disabled><option>All enrollment statuses</option></select></label><label>Status <select disabled><option>All statuses</option></select></label></div><p class="portal-inline-note">Search and filters require a connected student directory.</p></section><section class="portal-section"><div class="portal-section-heading"><div><h2>Student Directory</h2><p>No student records are connected.</p></div></div><div class="portal-table-wrap"><table class="portal-table"><thead><tr><th scope="col">Name</th><th scope="col">Contact</th><th scope="col">Enrollment</th><th scope="col">Course</th><th scope="col">Status</th></tr></thead><tbody><tr><td class="portal-empty-row" colspan="5">No student records are available.</td></tr></tbody></table></div></section><section class="portal-grid-2 portal-section"><article class="portal-panel portal-surface-blue"><h2 class="portal-panel-title">Student profile</h2><div class="portal-empty"><span class="portal-empty-icon" aria-hidden="true">♙</span><strong>No student selected</strong><span>Profile details appear when an authorised directory is connected.</span></div></article><article class="portal-panel"><h2 class="portal-panel-title">Enrollment and training progress</h2><div class="portal-empty"><span class="portal-empty-icon" aria-hidden="true">▤</span><strong>Training information unavailable</strong><span>Course enrolment and verified progress require student records.</span></div></article></section><section class="portal-panel portal-section portal-added-section"><h2>Enrollment workflow</h2><p>Review eligibility, license type, and requested start date before moving an application to the next stage.</p></section><section class="portal-panel portal-section portal-added-section"><h2>Learner record review</h2><p>Keep contact details, course status, and approved training accommodations aligned with authorised records.</p></section><span data-added-sections="v1" hidden></span></main></div></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Student Management in the DrivePro administration portal.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#1b232b">
+<title>Student Management | DrivePro Administration</title>
+<link rel="icon" href="assets/icons/drivepro-mark.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/pages.css">
+<link rel="stylesheet" href="css/dashboard.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/palette.css">
+<link rel="stylesheet" href="css/navigation.css">
+<script src="js/business-config.js" defer></script>
+<script src="js/dashboard-shell.js" defer></script>
+<script src="js/main.js" defer></script>
+</head>
+<body data-page="admin-students" data-portal-role="admin">
+<div class="portal-layout admin-portal">
+  <aside class="portal-sidebar" id="portalSidebar"></aside>
+  <main class="portal-main">
+    <div class="portal-topbar" id="portalTopbar"></div>
+
+    <header class="portal-welcome">
+      <div>
+        <p class="eyebrow">LEARNER DIRECTORY</p>
+        <h1>Student Management</h1>
+        <p>Manage student contact information, provisional permit status, allocated instructors, and practical lesson progress.</p>
+      </div>
+      <span class="portal-period"><span class="portal-status-dot"></span>142 Active Learners</span>
+    </header>
+
+    <!-- Controls -->
+    <section class="portal-panel">
+      <div class="portal-report-controls">
+        <label>Search Students: <input type="search" placeholder="Search by name, email, or permit..."></label>
+        <label>Enrollment: 
+          <select>
+            <option>All Enrollments</option>
+            <option>In Training (84)</option>
+            <option>Test Scheduled (26)</option>
+            <option>Passed / Alumni (32)</option>
+          </select>
+        </label>
+        <label>License Class: 
+          <select>
+            <option>All Classes</option>
+            <option>Class D (Passenger Car)</option>
+            <option>Class M (Motorcycle CBT)</option>
+            <option>Class C1 (Commercial Delivery)</option>
+          </select>
+        </label>
+      </div>
+    </section>
+
+    <!-- Student Table -->
+    <section class="portal-section">
+      <div class="portal-section-heading">
+        <div>
+          <h2>Student Directory (Active Records)</h2>
+          <p>Showing 5 most recent active learners of 142 total records.</p>
+        </div>
+      </div>
+
+      <div class="portal-table-wrap">
+        <table class="portal-table">
+          <thead>
+            <tr>
+              <th scope="col">Learner Name</th>
+              <th scope="col">Contact &amp; Permit</th>
+              <th scope="col">Enrolled Course</th>
+              <th scope="col">Assigned Instructor</th>
+              <th scope="col">Progress</th>
+              <th scope="col">Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Alex Morgan</strong></td>
+              <td>alex.m@example.com<br><small style="color:var(--muted)">Permit: #DP-849201</small></td>
+              <td>Beginner Car 20h Standard</td>
+              <td>David Miller (Manual)</td>
+              <td>12/20 Hours (60%)</td>
+              <td><span style="color:#2b6640;font-weight:700;">In Training</span></td>
+            </tr>
+            <tr>
+              <td><strong>Chloe Mitchell</strong></td>
+              <td>chloe.m@example.com<br><small style="color:var(--muted)">Permit: #DP-739104</small></td>
+              <td>Automatic Hybrid Suite</td>
+              <td>Sarah Jenkins (Auto)</td>
+              <td>18/20 Hours (90%)</td>
+              <td><span style="color:#bd8a55;font-weight:700;">Test Scheduled (Nov 04)</span></td>
+            </tr>
+            <tr>
+              <td><strong>Liam Turner</strong></td>
+              <td>liam.t@example.com<br><small style="color:var(--muted)">Permit: #DP-628491</small></td>
+              <td>Fast-Track Intensive (Class D)</td>
+              <td>David Miller (Manual)</td>
+              <td>15/15 Hours (100%)</td>
+              <td><span style="color:#2b6640;font-weight:700;">Passed First Time &#10003;</span></td>
+            </tr>
+            <tr>
+              <td><strong>Carlos Rodriguez</strong></td>
+              <td>carlos.r@example.com<br><small style="color:var(--muted)">Permit: #DP-519382</small></td>
+              <td>Motorcycle CBT (Class M)</td>
+              <td>Marcus Vance (Bike)</td>
+              <td>Full Day Practical (100%)</td>
+              <td><span style="color:#2b6640;font-weight:700;">Certified CBT &#10003;</span></td>
+            </tr>
+            <tr>
+              <td><strong>Emma Watson</strong></td>
+              <td>emma.w@example.com<br><small style="color:var(--muted)">Permit: #DP-402918</small></td>
+              <td>10-Hour Fast-Track Prep</td>
+              <td>James Thornton (Auto)</td>
+              <td>4/10 Hours (40%)</td>
+              <td><span style="color:#2b6640;font-weight:700;">In Training</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Student Profile Spotlight View -->
+    <section class="portal-grid-2 portal-section portal-added-section">
+      <article class="portal-panel portal-surface-blue">
+        <h2 class="portal-panel-title">Selected Student Profile: Alex Morgan</h2>
+        <div style="display:grid; gap:8px; font-size:13px;">
+          <div><strong>License Category:</strong> Class D (Passenger Car Manual)</div>
+          <div><strong>Provisional Permit Number:</strong> #DP-849201 (Verified &#10003;)</div>
+          <div><strong>Pickup Address:</strong> 742 Evergreen Terrace, West Sector</div>
+          <div><strong>Assigned Vehicle:</strong> 2024 Volkswagen Golf Dual-Control Manual</div>
+          <div><strong>Next Scheduled Session:</strong> Tomorrow at 09:00 AM (Roundabouts &amp; Priority)</div>
+        </div>
+      </article>
+
+      <article class="portal-panel portal-surface-sage">
+        <h2 class="portal-panel-title">Instructor Observations &amp; Next Milestones</h2>
+        <p class="portal-copy">"Alex shows excellent clutch balance and hill-start control. Needs 2 more sessions focusing on multi-lane roundabout lane choices before scheduling his test-route mock exam." &mdash; David Miller, Senior Instructor</p>
+        <div class="portal-progress-track" style="margin-top:14px;"><span style="width:60%;"></span></div>
+        <small style="color:var(--muted); display:block; margin-top:6px;">60% Overall Road Test Readiness</small>
+      </article>
+    </section>
+  </main>
+</div>
+</body>
+</html>

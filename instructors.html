@@ -3,9 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Meet DrivePro's certified, patient driving instructors — 100% government-approved male and female instructors offering dual-control automatic, manual, and motorcycle training.">
+<meta name="description" content="Browse instructor profiles and contact DrivePro to confirm current qualifications and availability.">
 <meta name="theme-color" content="#fffaf0">
-<title>Certified Driving Instructors | DrivePro Driving School</title>
+<title>Instructor Profiles | DrivePro Driving School</title>
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Instructor Profiles | DrivePro Driving School">
+<meta property="og:description" content="Browse instructor profiles and contact DrivePro to confirm current qualifications and availability.">
 <link rel="icon" href="assets/icons/drivepro-mark.svg" type="image/svg+xml">
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/components.css">
@@ -14,6 +18,7 @@
 <link rel="stylesheet" href="css/responsive.css">
 <link rel="stylesheet" href="css/palette.css">
 <link rel="stylesheet" href="css/navigation.css">
+<script src="js/business-config.js" defer></script>
 <script src="js/site-shell.js" defer></script>
 <script src="js/main.js" defer></script>
 </head>
@@ -23,19 +28,19 @@
 <main>
   <!-- Hero Section -->
   <section class="hero page-hero">
-    <img class="hero-photo" fetchpriority="high" src="asset/images/courses/lesson-guidance.jpg" alt="Certified driving instructor providing calm, patient guidance to a learner driver" loading="eager">
+    <img class="hero-photo" fetchpriority="high" src="asset/images/courses/lesson-guidance.jpg" width="1067" height="1600" alt="Driving lesson in progress" loading="eager">
     <div class="hero-content">
       <div class="hero-copy">
-        <p class="hero-subtitle">★ DVSA &amp; STATE DMV CERTIFIED INSTRUCTORS</p>
+        <p class="hero-subtitle">DRIVING INSTRUCTOR PROFILES</p>
         <h1>Guidance that makes confidence grow naturally.</h1>
-        <p>Every DrivePro driving instructor is fully government-licensed, background-checked, and committed to patient, zero-shouting instruction. Choose male or female instructors with modern dual-control automatic or manual cars.</p>
+        <p>Instructor profiles are being reviewed. Contact the school to confirm current availability, lesson types, and qualifications.</p>
         <div class="hero-actions">
-          <a class="hero-button" href="contact.html#book">Book a Driving Lesson →</a>
+          <a class="hero-button" href="contact.html#book">Book a Driving Lesson &rarr;</a>
           <a class="hero-button secondary" href="#instructors-grid">Browse Instructors</a>
         </div>
         <div class="hero-note">
           <span class="dot"></span>
-          <span>100% Certified ADIs • 98.4% Average Pass Rate • Door-to-Door Pickup Included</span>
+          <span>Instructor details are pending owner verification.</span>
         </div>
       </div>
     </div>
@@ -45,18 +50,18 @@
   <section class="section soft" id="instructors-grid">
     <div class="section-inner">
       <div class="section-heading">
-        <p class="eyebrow">MEET OUR CERTIFIED TEAM</p>
+        <p class="eyebrow">INSTRUCTOR PROFILES</p>
         <h2>Find the Right Instructor for Your Learning Style</h2>
-        <p>Search by name, teaching specialty, or vehicle transmission. Filter by automatic, manual, motorcycle, or nervous driver specialists.</p>
+        <p>Profile names, photographs, specialties, vehicles, experience, and credentials need owner confirmation before publication.</p>
       </div>
 
-      <div class="search-field">
+      <div class="search-field" hidden>
         <label class="sr-only" for="instructorSearch">Search instructor by name or specialty</label>
         <input id="instructorSearch" data-instructor-search type="search" placeholder="Search by instructor name, car, or specialty...">
       </div>
 
-      <div class="filter-bar">
-        <button class="filter-button active" type="button" data-instructor-filter="all">All Instructors (6)</button>
+      <div class="filter-bar" hidden>
+        <button class="filter-button active" type="button" data-instructor-filter="all">Listed Profiles (6)</button>
         <button class="filter-button" type="button" data-instructor-filter="auto">Automatic Only</button>
         <button class="filter-button" type="button" data-instructor-filter="manual">Manual Transmission</button>
         <button class="filter-button" type="button" data-instructor-filter="bike">Motorcycle / Two-Wheeler</button>
@@ -69,23 +74,21 @@
         <!-- Instructor 1: David Miller -->
         <article class="instructor-profile-card" data-instructor-card data-specialty="manual auto intensive">
           <div class="instructor-photo-wrap">
-            <img class="instructor-photo" src="asset/images/instructors/instructor-david.jpg" alt="David Miller, Senior Driving Instructor" loading="lazy">
-            <span class="instructor-rating-pill">★ 4.98 (340+ reviews)</span>
+            <img class="instructor-photo" src="asset/images/instructors/instructor-david.jpg" width="800" height="1208" alt="Driving instructor portrait; identity pending owner confirmation" loading="lazy">
           </div>
           <div class="instructor-card-body">
             <h3 class="instructor-name">David Miller</h3>
-            <span class="instructor-role">Senior Grade-A Approved Driving Instructor (ADI)</span>
+            <span class="instructor-role">Profile pending owner confirmation</span>
             <div class="instructor-meta-pills">
-              <span class="instructor-meta-pill">14 Years Exp</span>
-              <span class="instructor-meta-pill">99.1% Pass Rate</span>
-              <span class="instructor-meta-pill">Manual &amp; Auto</span>
+              <span class="instructor-meta-pill">Details pending verification</span>
+              <span class="instructor-meta-pill">Details pending verification</span>
             </div>
-            <p class="instructor-bio">Test-route specialist with over 14 years of teaching excellence. David is renowned for his calm demeanor, breaking down complex multi-lane roundabouts into clear, instinctive steps.</p>
-            <div class="instructor-vehicle-badge">
+            <p class="instructor-bio">Contact admissions to confirm current instructor availability and lesson options.</p>
+            <div class="instructor-vehicle-badge" hidden>
               <span>🚗 Vehicle: <strong>2024 VW Golf Dual-Control (Manual)</strong></span>
             </div>
             <div class="instructor-card-action">
-              <a class="button" href="contact.html?instructor=David#book">Book with David</a>
+              <a class="button" href="contact.html?instructor=David#book">Ask about David's profile</a>
             </div>
           </div>
         </article>
@@ -93,23 +96,21 @@
         <!-- Instructor 2: Sarah Jenkins -->
         <article class="instructor-profile-card" data-instructor-card data-specialty="auto defensive">
           <div class="instructor-photo-wrap">
-            <img class="instructor-photo" src="asset/images/instructors/instructor-sarah.jpg" alt="Sarah Jenkins, Driving Instructor and Anxiety Specialist" loading="lazy">
-            <span class="instructor-rating-pill">★ 4.99 (410+ reviews)</span>
+            <img class="instructor-photo" src="asset/images/instructors/instructor-sarah.jpg" width="800" height="533" alt="Driving instructor portrait; identity pending owner confirmation" loading="lazy">
           </div>
           <div class="instructor-card-body">
             <h3 class="instructor-name">Sarah Jenkins</h3>
-            <span class="instructor-role">Nervous Driver Coach &amp; Senior ADI</span>
+            <span class="instructor-role">Profile pending owner confirmation</span>
             <div class="instructor-meta-pills">
-              <span class="instructor-meta-pill">10 Years Exp</span>
-              <span class="instructor-meta-pill">98.7% Pass Rate</span>
-              <span class="instructor-meta-pill">Automatic Specialist</span>
+              <span class="instructor-meta-pill">Details pending verification</span>
+              <span class="instructor-meta-pill">Details pending verification</span>
             </div>
-            <p class="instructor-bio">Patient, encouraging, and highly praised by anxious learners. Sarah specializes in fear-of-driving counseling, calm parallel parking coaching, and gentle step-by-step road habit formation.</p>
-            <div class="instructor-vehicle-badge">
+            <p class="instructor-bio">Contact admissions to confirm current instructor availability and lesson options.</p>
+            <div class="instructor-vehicle-badge" hidden>
               <span>🚗 Vehicle: <strong>2024 Toyota Corolla Hybrid (Automatic)</strong></span>
             </div>
             <div class="instructor-card-action">
-              <a class="button" href="contact.html?instructor=Sarah#book">Book with Sarah</a>
+              <a class="button" href="contact.html?instructor=Sarah#book">Ask about Sarah's profile</a>
             </div>
           </div>
         </article>
@@ -117,23 +118,20 @@
         <!-- Instructor 3: Marcus Vance -->
         <article class="instructor-profile-card" data-instructor-card data-specialty="bike defensive">
           <div class="instructor-photo-wrap">
-            <img class="instructor-photo" src="asset/images/instructors/instructor-marcus.jpg" alt="Marcus Vance, Master Motorcycle Coach" loading="lazy">
-            <span class="instructor-rating-pill">★ 4.96 (280+ reviews)</span>
+            <img class="instructor-photo" src="asset/images/instructors/instructor-marcus.jpg" width="800" height="1200" alt="Driving instructor portrait; identity pending owner confirmation" loading="lazy">
           </div>
           <div class="instructor-card-body">
             <h3 class="instructor-name">Marcus Vance</h3>
-            <span class="instructor-role">Master Motorcycle Coach (Category A/M)</span>
+            <span class="instructor-role">Profile pending owner confirmation</span>
             <div class="instructor-meta-pills">
-              <span class="instructor-meta-pill">12 Years Exp</span>
-              <span class="instructor-meta-pill">98.2% Pass Rate</span>
-              <span class="instructor-meta-pill">MSF Certified Coach</span>
+              <span class="instructor-meta-pill">Details pending verification</span>
             </div>
-            <p class="instructor-bio">Motorcycle Safety Foundation certified coach focusing on low-speed figure-8s, emergency braking maneuvers, counter-steering dynamics, and defensive motorcycle road positioning.</p>
-            <div class="instructor-vehicle-badge">
+            <p class="instructor-bio">Contact admissions to confirm current instructor availability and lesson options.</p>
+            <div class="instructor-vehicle-badge" hidden>
               <span>🏍️ Fleet: <strong>Honda CB300R &amp; Yamaha MT-07 Dual-ABS</strong></span>
             </div>
             <div class="instructor-card-action">
-              <a class="button" href="contact.html?instructor=Marcus#book">Book with Marcus</a>
+              <a class="button" href="contact.html?instructor=Marcus#book">Ask about Marcus's profile</a>
             </div>
           </div>
         </article>
@@ -141,23 +139,20 @@
         <!-- Instructor 4: Elena Rostova -->
         <article class="instructor-profile-card" data-instructor-card data-specialty="auto manual defensive">
           <div class="instructor-photo-wrap">
-            <img class="instructor-photo" src="asset/images/instructors/instructor-elena.jpg" alt="Elena Rostova, Dual-Control Instructor" loading="lazy">
-            <span class="instructor-rating-pill">★ 4.97 (310+ reviews)</span>
+            <img class="instructor-photo" src="asset/images/instructors/instructor-elena.jpg" width="800" height="533" alt="Driving instructor portrait; identity pending owner confirmation" loading="lazy">
           </div>
           <div class="instructor-card-body">
             <h3 class="instructor-name">Elena Rostova</h3>
-            <span class="instructor-role">Defensive Driving &amp; Highway Specialist</span>
+            <span class="instructor-role">Profile pending owner confirmation</span>
             <div class="instructor-meta-pills">
-              <span class="instructor-meta-pill">8 Years Exp</span>
-              <span class="instructor-meta-pill">97.9% Pass Rate</span>
-              <span class="instructor-meta-pill">English, French, Russian</span>
+              <span class="instructor-meta-pill">Details pending verification</span>
             </div>
-            <p class="instructor-bio">Focuses on hazard awareness, adverse weather handling, and multi-lane highway slip road merging. Elena helps students build lifelong defensive instincts and quick decision-making.</p>
-            <div class="instructor-vehicle-badge">
+            <p class="instructor-bio">Contact admissions to confirm current instructor availability and lesson options.</p>
+            <div class="instructor-vehicle-badge" hidden>
               <span>🚗 Vehicle: <strong>2024 Hyundai i30 Dual-Control (Automatic)</strong></span>
             </div>
             <div class="instructor-card-action">
-              <a class="button" href="contact.html?instructor=Elena#book">Book with Elena</a>
+              <a class="button" href="contact.html?instructor=Elena#book">Ask about Elena's profile</a>
             </div>
           </div>
         </article>
@@ -165,23 +160,20 @@
         <!-- Instructor 5: James Thornton -->
         <article class="instructor-profile-card" data-instructor-card data-specialty="commercial manual intensive">
           <div class="instructor-photo-wrap">
-            <img class="instructor-photo" src="asset/images/instructors/instructor-james.jpg" alt="James Thornton, Commercial Vehicle Instructor" loading="lazy">
-            <span class="instructor-rating-pill">★ 4.95 (260+ reviews)</span>
+            <img class="instructor-photo" src="asset/images/instructors/instructor-james.jpg" width="800" height="1200" alt="Driving instructor portrait; identity pending owner confirmation" loading="lazy">
           </div>
           <div class="instructor-card-body">
             <h3 class="instructor-name">James Thornton</h3>
-            <span class="instructor-role">Commercial Driver &amp; Fast-Track Intensive Lead</span>
+            <span class="instructor-role">Profile pending owner confirmation</span>
             <div class="instructor-meta-pills">
-              <span class="instructor-meta-pill">16 Years Exp</span>
-              <span class="instructor-meta-pill">98.5% Pass Rate</span>
-              <span class="instructor-meta-pill">CDL &amp; Light Commercial</span>
+              <span class="instructor-meta-pill">Details pending verification</span>
             </div>
-            <p class="instructor-bio">Former fleet safety examiner who prepares delivery drivers, utility vehicle operators, and intensive car students for high-precision vehicle control, mirrors, and mock test success.</p>
-            <div class="instructor-vehicle-badge">
+            <p class="instructor-bio">Contact admissions to confirm current instructor availability and lesson options.</p>
+            <div class="instructor-vehicle-badge" hidden>
               <span>🚐 Vehicle: <strong>Ford Transit Custom &amp; Toyota RAV4</strong></span>
             </div>
             <div class="instructor-card-action">
-              <a class="button" href="contact.html?instructor=James#book">Book with James</a>
+              <a class="button" href="contact.html?instructor=James#book">Ask about James's profile</a>
             </div>
           </div>
         </article>
@@ -189,66 +181,45 @@
         <!-- Instructor 6: Priya Sharma -->
         <article class="instructor-profile-card" data-instructor-card data-specialty="auto defensive">
           <div class="instructor-photo-wrap">
-            <img class="instructor-photo" src="asset/images/instructors/instructor-priya.jpg" alt="Priya Sharma, Beginner Driving Specialist" loading="lazy">
-            <span class="instructor-rating-pill">★ 4.99 (390+ reviews)</span>
+            <img class="instructor-photo" src="asset/images/instructors/instructor-priya.jpg" width="800" height="1200" alt="Driving instructor portrait; identity pending owner confirmation" loading="lazy">
           </div>
           <div class="instructor-card-body">
             <h3 class="instructor-name">Priya Sharma</h3>
-            <span class="instructor-role">Beginner Specialist &amp; Youth Driver Mentor</span>
+            <span class="instructor-role">Profile pending owner confirmation</span>
             <div class="instructor-meta-pills">
-              <span class="instructor-meta-pill">7 Years Exp</span>
-              <span class="instructor-meta-pill">98.4% Pass Rate</span>
-              <span class="instructor-meta-pill">English, Hindi</span>
+              <span class="instructor-meta-pill">Details pending verification</span>
             </div>
-            <p class="instructor-bio">Creates a positive, pressure-free atmosphere where teen and adult learners can practice starting, stopping, and bay parking without rushing. Extremely warm, patient, and thorough.</p>
-            <div class="instructor-vehicle-badge">
+            <p class="instructor-bio">Contact admissions to confirm current instructor availability and lesson options.</p>
+            <div class="instructor-vehicle-badge" hidden>
               <span>🚗 Vehicle: <strong>2024 Honda Civic Dual-Control (Automatic)</strong></span>
             </div>
             <div class="instructor-card-action">
-              <a class="button" href="contact.html?instructor=Priya#book">Book with Priya</a>
+              <a class="button" href="contact.html?instructor=Priya#book">Ask about Priya's profile</a>
             </div>
           </div>
         </article>
+
+        <!-- Empty State for Instructor Filter / Search -->
+        <div class="empty-state hidden" id="instructorEmptyState" role="status">
+          <div class="empty-state-icon" aria-hidden="true">&#128104;&#8205;&#127979;</div>
+          <h3>No Instructors Found</h3>
+          <p id="instructorEmptyMessage">We couldn't find any instructor profiles matching your criteria. Try a different search term.</p>
+          <button class="button outline" id="resetInstructorFilterBtn" type="button">Reset Filters &amp; View All Instructors</button>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- DrivePro Instructor Vetting Standards -->
-  <section class="section">
-    <div class="section-inner">
-      <div class="section-heading">
-        <p class="eyebrow">OUR RIGOROUS STANDARDS</p>
-        <h2>Why You Are in Safe Hands with DrivePro</h2>
-        <p>We believe who teaches you matters just as much as what you learn. Every DrivePro instructor satisfies strict professional requirements.</p>
-      </div>
-
-      <div class="card-grid">
-        <article class="card">
-          <div class="card-copy">
-            <span class="tag">GOVERNMENT CERTIFIED</span>
-            <h3>DVSA &amp; State DMV Approved</h3>
-            <p>All instructors hold valid Grade-A/B ADI or State Department of Transportation instructional licenses, subject to mandatory annual check-tests.</p>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="card-copy">
-            <span class="tag">BACKGROUND CHECKED</span>
-            <h3>100% Criminal Record Vetted</h3>
-            <p>Every instructor completes full enhanced background checks and vulnerable sector screening before stepping into a training vehicle.</p>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="card-copy">
-            <span class="tag">ZERO-AGGRESSION CODE</span>
-            <h3>Patient, Encouraging Teaching</h3>
-            <p>We enforce a strict zero-yelling, zero-stress code. If an instructor makes you feel uncomfortable, we reassign you immediately at no charge.</p>
-          </div>
-        </article>
-      </div>
+  <!-- OWNER VERIFICATION REQUIRED: licensing, background-check, and service guarantees lack records in this repository. -->
+  <section class="section soft">
+  <div class="section-inner">
+    <div class="section-heading">
+      <p class="eyebrow">PROFILE VERIFICATION</p>
+      <h2>Instructor information awaits owner confirmation</h2>
+      <p>Qualifications, licensing, background checks, availability, and service guarantees must be verified before they are represented as facts.</p>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- CTA Banner -->
   <section class="section section-alt">
@@ -257,11 +228,11 @@
         <div>
           <p class="eyebrow">MATCH YOUR SCHEDULE</p>
           <h2>Prefer to learn with a specific instructor or transmission?</h2>
-          <p>Tell us your preferred days, times, and instructor choice. Doorstep pickup is included on every lesson.</p>
+        <p>Contact the school to confirm current instructor availability and lesson options.</p>
         </div>
         <div style="display: flex; flex-direction: column; gap: 10px; align-items: stretch;">
-          <a class="button" href="contact.html#book">Book a Driving Lesson →</a>
-          <a class="button secondary" href="tel:+18005550199">Call (800) 555-0199</a>
+          <a class="button" href="contact.html#book">Book a Driving Lesson &rarr;</a>
+          <a class="button secondary" href="contact.html">Contact details pending confirmation</a>
         </div>
       </div>
     </div>

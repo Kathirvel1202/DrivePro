@@ -1,1 +1,156 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Profile Settings in the DrivePro student portal."><meta name="theme-color" content="#1b232b"><title>Profile Settings | DrivePro</title><link rel="icon" href="assets/icons/drivepro-mark.svg" type="image/svg+xml"><link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/components.css"><link rel="stylesheet" href="css/pages.css"><link rel="stylesheet" href="css/dashboard.css"><link rel="stylesheet" href="css/responsive.css"><link rel="stylesheet" href="css/palette.css"><link rel="stylesheet" href="css/navigation.css"><script src="js/dashboard-shell.js" defer></script><script src="js/main.js" defer></script></head><body data-page="student-settings" data-portal-role="student"><div class="portal-layout student-portal"><aside class="portal-sidebar" id="portalSidebar"></aside><main class="portal-main"><div class="portal-topbar" id="portalTopbar"></div><header class="portal-welcome"><div><p class="eyebrow">ACCOUNT PREFERENCES</p><h1>Profile Settings</h1><p>Review the profile fields and preferences associated with a student account.</p></div><span class="portal-period"><span class="portal-status-dot"></span>Student portal</span></header><form class="portal-panel portal-form"><p class="portal-inline-note">These fields are for display only. Changes are not saved or sent to a server.</p><div class="portal-form-grid"><label class="portal-field">Full name<input type="text" autocomplete="off" aria-label="Full name"></label><label class="portal-field">Email address<input type="email" autocomplete="off" aria-label="Email address"></label><label class="portal-field">Phone number<input type="tel" autocomplete="off" aria-label="Phone number"></label><label class="portal-field">Address line<input type="text" autocomplete="off" aria-label="Address line"></label><label class="portal-field">City or town<input type="text" autocomplete="off" aria-label="City or town"></label><label class="portal-field">Postal code<input type="text" autocomplete="off" aria-label="Postal code"></label><label class="portal-field">Emergency contact name<input type="text" autocomplete="off" aria-label="Emergency contact name"></label><label class="portal-field">Emergency contact phone<input type="tel" autocomplete="off" aria-label="Emergency contact phone"></label><label class="portal-field">Preferred contact method<select aria-label="Preferred contact method"><option value="">Select a preference</option><option>Email</option><option>Phone</option></select></label><label class="portal-field">Lesson reminders<select aria-label="Lesson reminders"><option value="">Select a preference</option><option>Email</option><option>Phone</option></select></label></div><div class="portal-form-actions"><button type="button" disabled>Save changes</button><a class="portal-secondary-link" href="student-dashboard.html">Cancel</a></div><section class="portal-settings-security"><h2 class="portal-panel-title">Security and password</h2><p class="portal-copy">Password management requires a secure account service. Do not enter or share a password on this page.</p></section></form><section class="portal-panel portal-section portal-added-section"><h2>Contact preferences</h2><p>Keep your email and phone number current so lesson updates and school notices can reach you.</p></section><section class="portal-panel portal-section portal-added-section"><h2>Profile review</h2><p>Check that your displayed name and course interest match the details you want the school to use.</p></section><section class="portal-panel portal-section portal-added-section"><h2>Privacy choices</h2><p>Share only information needed for learning support and contact the school to correct a record.</p></section><section class="portal-panel portal-section portal-added-section"><h2>Accessibility needs</h2><p>Tell DrivePro about communication or accessibility needs so suitable support can be discussed.</p></section><span data-added-sections="v1" hidden></span></main></div></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Profile Settings in the DrivePro student portal.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#1b232b">
+<title>Profile Settings | DrivePro Student Portal</title>
+<link rel="icon" href="assets/icons/drivepro-mark.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/pages.css">
+<link rel="stylesheet" href="css/dashboard.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/palette.css">
+<link rel="stylesheet" href="css/navigation.css">
+<script src="js/business-config.js" defer></script>
+<script src="js/dashboard-shell.js" defer></script>
+<script src="js/main.js" defer></script>
+</head>
+<body data-page="student-settings" data-portal-role="student">
+<div class="portal-layout student-portal">
+  <aside class="portal-sidebar" id="portalSidebar"></aside>
+  <main class="portal-main">
+    <div class="portal-topbar" id="portalTopbar"></div>
+
+    <header class="portal-welcome">
+      <div>
+        <p class="eyebrow">ACCOUNT &amp; CONTACT PREFERENCES</p>
+        <h1>Profile Settings</h1>
+        <p>Update your personal information, lesson pickup address, emergency contact, and SMS schedule notifications.</p>
+      </div>
+      <span class="portal-period"><span class="portal-status-dot"></span>Learner #DP-849201</span>
+    </header>
+
+    <form class="portal-panel portal-form" id="studentSettingsForm">
+      <div id="settingsFeedback" style="display:none; padding:10px 14px; margin-bottom:16px; border-radius:6px; font-size:13px; font-weight:600; background:#e8f5e9; color:#2b6640; border:1px solid #c8e6c9;">
+        &#10003; Profile settings updated successfully!
+      </div>
+
+      <div class="portal-form-grid">
+        <label class="portal-field">
+          Full Name
+          <input type="text" name="fullName" value="Alex Morgan" required aria-label="Full name">
+        </label>
+        <label class="portal-field">
+          Email Address
+          <input type="email" name="email" value="alex.m@example.com" required aria-label="Email address">
+        </label>
+        <label class="portal-field">
+          Phone Number
+          <input type="tel" name="phone" value="(555) 392-1084" required aria-label="Phone number">
+        </label>
+        <label class="portal-field">
+          Provisional Permit Number
+          <input type="text" name="permit" value="DP-849201" readonly aria-label="Provisional permit number" style="background:var(--surface-sunken); cursor:not-allowed;">
+        </label>
+        <label class="portal-field">
+          Lesson Pickup Address
+          <input type="text" name="address" value="742 Evergreen Terrace, Apt 4B" required aria-label="Address line">
+        </label>
+        <label class="portal-field">
+          City / Suburb
+          <input type="text" name="city" value="West Sector, Metro City" required aria-label="City or town">
+        </label>
+        <label class="portal-field">
+          Postal Code
+          <input type="text" name="postalCode" value="97477" required aria-label="Postal code">
+        </label>
+        <label class="portal-field">
+          Target Road Test Date
+          <input type="date" name="targetDate" value="2026-11-20" aria-label="Target road test date">
+        </label>
+        <label class="portal-field">
+          Emergency Contact Name
+          <input type="text" name="emergencyName" value="Sarah Morgan (Mother)" required aria-label="Emergency contact name">
+        </label>
+        <label class="portal-field">
+          Emergency Contact Phone
+          <input type="tel" name="emergencyPhone" value="(555) 392-1085" required aria-label="Emergency contact phone">
+        </label>
+        <label class="portal-field">
+          Preferred Contact Method
+          <select name="contactMethod" aria-label="Preferred contact method">
+            <option value="both" selected>SMS &amp; Email</option>
+            <option value="sms">SMS Text Messages Only</option>
+            <option value="email">Email Only</option>
+            <option value="phone">Phone Calls</option>
+          </select>
+        </label>
+        <label class="portal-field">
+          Lesson Reminder Timing
+          <select name="reminderTiming" aria-label="Lesson reminders">
+            <option value="24h" selected>24 Hours Before Session</option>
+            <option value="48h">48 Hours Before Session</option>
+            <option value="2h">2 Hours Before Pickup</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="portal-form-actions" style="margin-top:20px; display:flex; align-items:center; gap:12px;">
+        <button type="submit" class="portal-primary-action">Save Profile Changes</button>
+        <a class="portal-secondary-link" href="student-dashboard.html">Return to Dashboard</a>
+      </div>
+
+      <section class="portal-settings-security" style="margin-top:28px; border-top:1px solid var(--border); padding-top:20px;">
+        <h2 class="portal-panel-title">Security &amp; Password</h2>
+        <p class="portal-copy" style="font-size:13px;">Manage your account login credentials. Your password protects your scheduled driving hours, instructor feedback logs, and billing receipts.</p>
+        <div style="display:flex; gap:12px; margin-top:12px;">
+          <button type="button" class="portal-secondary-link" onclick="const p = prompt('Enter new password (minimum 8 characters):'); if (p && p.length >= 8) alert('Password updated successfully!'); else if (p) alert('Password must be at least 8 characters long.');">Change Password &rarr;</button>
+        </div>
+      </section>
+    </form>
+
+    <section class="portal-grid-2 portal-section">
+      <article class="portal-panel">
+        <h2 class="portal-panel-title">Doorstep Pickup Instructions</h2>
+        <p class="portal-copy">Your assigned instructor (David Miller) uses this pickup address for all practical in-car sessions. If you are starting from school or work, please update your pickup address at least 24 hours prior to the lesson.</p>
+      </article>
+
+      <article class="portal-panel portal-surface-sage">
+        <h2 class="portal-panel-title">Driving License Prerequisites</h2>
+        <p class="portal-copy">Your provisional permit (<code>#DP-849201</code>) has been verified by the DrivePro admissions desk. Remember to bring your physical photocard permit to every in-car lesson.</p>
+      </article>
+    </section>
+  </main>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('studentSettingsForm');
+  const feedback = document.getElementById('settingsFeedback');
+  if (form) {
+    // Load persisted settings if any
+    try {
+      const saved = JSON.parse(localStorage.getItem('drivepro-student-profile') || '{}');
+      for (const [key, val] of Object.entries(saved)) {
+        if (form.elements[key]) form.elements[key].value = val;
+      }
+    } catch (e) {}
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const data = Object.fromEntries(new FormData(form).entries());
+      localStorage.setItem('drivepro-student-profile', JSON.stringify(data));
+      if (feedback) {
+        feedback.style.display = 'block';
+        setTimeout(() => { feedback.style.display = 'none'; }, 4000);
+      }
+    });
+  }
+});
+</script>
+</body>
+</html>

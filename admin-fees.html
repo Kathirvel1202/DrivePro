@@ -1,110 +1,140 @@
 <!doctype html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Fees & Invoices in the DrivePro administration portal.">
-    <meta name="theme-color" content="#1b232b">
-    <title>Fees & Invoices | DrivePro Administration</title>
-    <link rel="icon" href="assets/icons/drivepro-mark.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/components.css">
-    <link rel="stylesheet" href="css/pages.css">
-    <link rel="stylesheet" href="css/dashboard.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="css/palette.css">
-    <link rel="stylesheet" href="css/navigation.css">
-    <script src="js/dashboard-shell.js" defer></script>
-    <script src="js/main.js" defer></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Fees & Invoices in the DrivePro administration portal.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#1b232b">
+<title>Fees &amp; Invoices | DrivePro Administration</title>
+<link rel="icon" href="assets/icons/drivepro-mark.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/pages.css">
+<link rel="stylesheet" href="css/dashboard.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/palette.css">
+<link rel="stylesheet" href="css/navigation.css">
+<script src="js/business-config.js" defer></script>
+<script src="js/dashboard-shell.js" defer></script>
+<script src="js/main.js" defer></script>
 </head>
-
 <body data-page="admin-fees" data-portal-role="admin">
-    <div class="portal-layout admin-portal">
-        <aside class="portal-sidebar" id="portalSidebar"></aside>
-        <main class="portal-main">
-            <div class="portal-topbar" id="portalTopbar"></div>
-            <header class="portal-welcome">
-                <div>
-                    <p class="eyebrow">FINANCE RECORDS</p>
-                    <h1>Fees & Invoices</h1>
-                    <p>Review published course pricing, invoices, balances, and refund requests from connected billing
-                        records.</p>
-                </div><span class="portal-period"><span class="portal-status-dot"></span>School operations</span>
-            </header>
-            <section class="portal-grid-3">
-                <article class="portal-panel">
-                    <h2 class="portal-panel-title">Fee overview</h2>
-                    <div class="portal-empty"><span class="portal-empty-icon"
-                            aria-hidden="true">₹</span><strong>Awaiting records</strong><span>No verified fee records
-                            are connected.</span></div>
-                </article>
-                <article class="portal-panel">
-                    <h2 class="portal-panel-title">Course pricing</h2>
-                    <div class="portal-empty"><span class="portal-empty-icon"
-                            aria-hidden="true">₹</span><strong>Awaiting records</strong><span>Pricing requires an
-                            approved catalogue.</span></div>
-                </article>
-                <article class="portal-panel">
-                    <h2 class="portal-panel-title">Outstanding balances</h2>
-                    <div class="portal-empty"><span class="portal-empty-icon"
-                            aria-hidden="true">₹</span><strong>Awaiting records</strong><span>Balances are not
-                            available.</span></div>
-                </article>
-            </section>
-            <section class="portal-section">
-                <div class="portal-section-heading">
-                    <div>
-                        <h2>Invoice Directory</h2>
-                        <p>No billing records are connected.</p>
-                    </div>
-                </div>
-                <div class="portal-table-wrap">
-                    <table class="portal-table">
-                        <thead>
-                            <tr>
-                                <th scope="col">Invoice</th>
-                                <th scope="col">Student</th>
-                                <th scope="col">Date</th>
-                                <th scope="col">Amount</th>
-                                <th scope="col">Payment status</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="portal-empty-row" colspan="5">No invoice records are available.</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </section>
-            <section class="portal-grid-2 portal-section">
-                <article class="portal-panel portal-surface-sage">
-                    <h2 class="portal-panel-title">Refund management</h2>
-                    <div class="portal-empty"><span class="portal-empty-icon" aria-hidden="true">↩</span><strong>No
-                            refund requests</strong><span>Refund requests and decisions require a secure billing
-                            service.</span></div><button class="portal-disabled-action" type="button" disabled>Refund
-                        controls unavailable</button>
-                </article>
-                <article class="portal-panel">
-                    <h2 class="portal-panel-title">Financial policy</h2>
-                    <p class="portal-copy">Use current school-approved pricing, payment, cancellation, and refund
-                        policies. This interface does not collect payments or change records.</p><a
-                        class="portal-text-link" href="contact.html">Confirm policy with DrivePro →</a>
-                </article>
-            </section>
-            <section class="portal-panel portal-section portal-added-section">
-                <h2>Reconciliation routine</h2>
-                <p>Match invoice references with the school ledger before changing payment status, and record
-                    discrepancies for follow-up.</p>
-            </section>
-            <section class="portal-panel portal-section portal-added-section">
-                <h2>Refund review steps</h2>
-                <p>Confirm the original transaction, cancellation terms, and approval record before marking a refund
-                    resolved.</p>
-            </section><span data-added-sections="v1" hidden></span>
-        </main>
-    </div>
-</body>
+<div class="portal-layout admin-portal">
+  <aside class="portal-sidebar" id="portalSidebar"></aside>
+  <main class="portal-main">
+    <div class="portal-topbar" id="portalTopbar"></div>
 
+    <header class="portal-welcome">
+      <div>
+        <p class="eyebrow">FINANCIAL LEDGER</p>
+        <h1>Fees &amp; Invoices</h1>
+        <p>Review course payments, student installment schedules, test-vehicle hire fees, and refund statuses.</p>
+      </div>
+      <span class="portal-period"><span class="portal-status-dot"></span>$28,450 Q4 Revenue</span>
+    </header>
+
+    <!-- Financial KPI Summary -->
+    <section class="portal-grid-3">
+      <article class="portal-panel">
+        <h2 class="portal-panel-title">Total Collected (Q4)</h2>
+        <strong class="portal-kpi-value" style="font-size:24px;">$28,450.00</strong>
+        <p class="portal-copy" style="margin-top:6px;">All package payments and hourly lessons logged.</p>
+      </article>
+
+      <article class="portal-panel">
+        <h2 class="portal-panel-title">Pending Installments</h2>
+        <strong class="portal-kpi-value" style="font-size:24px; color:#bd8a55;">$4,125.00</strong>
+        <p class="portal-copy" style="margin-top:6px;">11 students with upcoming 2nd/3rd installment payments.</p>
+      </article>
+
+      <article class="portal-panel">
+        <h2 class="portal-panel-title">Refund Disputes</h2>
+        <strong class="portal-kpi-value" style="font-size:24px; color:#2b6640;">0 Active</strong>
+        <p class="portal-copy" style="margin-top:6px;">100% student satisfaction guarantee standing.</p>
+      </article>
+    </section>
+
+    <!-- Invoices Table -->
+    <section class="portal-section">
+      <div class="portal-section-heading">
+        <div>
+          <h2>Invoice Directory</h2>
+          <p>Recent transactions and package payments.</p>
+        </div>
+      </div>
+
+      <div class="portal-table-wrap">
+        <table class="portal-table">
+          <thead>
+            <tr>
+              <th scope="col">Invoice #</th>
+              <th scope="col">Student Name</th>
+              <th scope="col">Date Issued</th>
+              <th scope="col">Course Package</th>
+              <th scope="col">Amount</th>
+              <th scope="col">Payment Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>INV-2026-1042</strong></td>
+              <td>Alex Morgan</td>
+              <td>Oct 12, 2026</td>
+              <td>Beginner 20h Standard License</td>
+              <td>$750.00</td>
+              <td><span style="color:#2b6640;font-weight:700;">Paid (Full)</span></td>
+            </tr>
+            <tr>
+              <td><strong>INV-2026-1043</strong></td>
+              <td>Chloe Mitchell</td>
+              <td>Oct 15, 2026</td>
+              <td>Automatic Hybrid Suite (Installment 1/2)</td>
+              <td>$375.00</td>
+              <td><span style="color:#bd8a55;font-weight:700;">Part-Paid ($375 Due)</span></td>
+            </tr>
+            <tr>
+              <td><strong>INV-2026-1044</strong></td>
+              <td>Liam Turner</td>
+              <td>Sep 28, 2026</td>
+              <td>Fast-Track Intensive + Mock Exam</td>
+              <td>$480.00</td>
+              <td><span style="color:#2b6640;font-weight:700;">Paid (Full)</span></td>
+            </tr>
+            <tr>
+              <td><strong>INV-2026-1045</strong></td>
+              <td>Carlos Rodriguez</td>
+              <td>Oct 18, 2026</td>
+              <td>Motorcycle CBT Full Day Course</td>
+              <td>$190.00</td>
+              <td><span style="color:#2b6640;font-weight:700;">Paid (Full)</span></td>
+            </tr>
+            <tr>
+              <td><strong>INV-2026-1046</strong></td>
+              <td>Emma Watson</td>
+              <td>Oct 22, 2026</td>
+              <td>Fast-Track 10-Hour Package</td>
+              <td>$480.00</td>
+              <td><span style="color:#2b6640;font-weight:700;">Paid (Full)</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Policies Panel -->
+    <section class="portal-grid-2 portal-section portal-added-section">
+      <article class="portal-panel portal-surface-sage">
+        <h2 class="portal-panel-title">Installment Policy</h2>
+        <p class="portal-copy">Students can split any 20h or 30h course into 2 or 3 interest-free installments. The first payment is due upon enrollment, with the remaining balance due prior to the 10th lesson.</p>
+      </article>
+
+      <article class="portal-panel portal-surface-blue">
+        <h2 class="portal-panel-title">Cancellation &amp; Refund Terms</h2>
+        <p class="portal-copy">Lessons cancelled with at least 24 hours notice are credited back to the student's lesson bank. Our First Lesson Satisfaction Guarantee offers full refund if dissatisfied after session 1.</p>
+      </article>
+    </section>
+  </main>
+</div>
+</body>
 </html>

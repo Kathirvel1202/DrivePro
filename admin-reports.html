@@ -1,1 +1,133 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Reports in the DrivePro administration portal."><meta name="theme-color" content="#1b232b"><title>Reports | DrivePro Administration</title><link rel="icon" href="assets/icons/drivepro-mark.svg" type="image/svg+xml"><link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/components.css"><link rel="stylesheet" href="css/pages.css"><link rel="stylesheet" href="css/dashboard.css"><link rel="stylesheet" href="css/responsive.css"><link rel="stylesheet" href="css/palette.css"><link rel="stylesheet" href="css/navigation.css"><script src="js/dashboard-shell.js" defer></script><script src="js/main.js" defer></script></head><body data-page="admin-reports" data-portal-role="admin"><div class="portal-layout admin-portal"><aside class="portal-sidebar" id="portalSidebar"></aside><main class="portal-main"><div class="portal-topbar" id="portalTopbar"></div><header class="portal-welcome"><div><p class="eyebrow">OPERATIONAL REPORTS</p><h1>Reports</h1><p>Prepare reports from verified enrollment, training, scheduling, and billing records.</p></div><span class="portal-period"><span class="portal-status-dot"></span>School operations</span></header><section class="portal-panel"><div class="portal-report-controls"><label>Start date <input type="date" disabled></label><label>End date <input type="date" disabled></label><button type="button" disabled>Apply filters</button><button type="button" disabled>Export</button></div><p class="portal-inline-note">Filters and export require connected data. No report file is generated here.</p></section><section class="portal-grid-2 portal-section"><article class="portal-panel"><h2 class="portal-panel-title">Student enrollment</h2><div class="portal-empty"><span class="portal-empty-icon" aria-hidden="true">▥</span><strong>Report data unavailable</strong><span>No verified enrollment data is available.</span></div></article><article class="portal-panel"><h2 class="portal-panel-title">Course enrollment</h2><div class="portal-empty"><span class="portal-empty-icon" aria-hidden="true">▥</span><strong>Report data unavailable</strong><span>Course enrollment is not connected.</span></div></article><article class="portal-panel"><h2 class="portal-panel-title">Instructor workload</h2><div class="portal-empty"><span class="portal-empty-icon" aria-hidden="true">▥</span><strong>Report data unavailable</strong><span>Instructor assignments are not connected.</span></div></article><article class="portal-panel"><h2 class="portal-panel-title">Driving-hour completion</h2><div class="portal-empty"><span class="portal-empty-icon" aria-hidden="true">▥</span><strong>Report data unavailable</strong><span>Verified lesson hours are unavailable.</span></div></article><article class="portal-panel"><h2 class="portal-panel-title">Lesson scheduling</h2><div class="portal-empty"><span class="portal-empty-icon" aria-hidden="true">▥</span><strong>Report data unavailable</strong><span>Scheduling records are not connected.</span></div></article><article class="portal-panel"><h2 class="portal-panel-title">Fees and invoices</h2><div class="portal-empty"><span class="portal-empty-icon" aria-hidden="true">▥</span><strong>Report data unavailable</strong><span>Billing data is not connected.</span></div></article></section><section class="portal-panel portal-surface-blue portal-section"><h2 class="portal-panel-title">Report output</h2><div class="portal-empty"><span class="portal-empty-icon" aria-hidden="true">▥</span><strong>No charts or statistics to display</strong><span>Reports require verified source data and a reporting service.</span></div></section><section class="portal-panel portal-section portal-added-section"><h2>Report definitions</h2><p>Use consistent date ranges and status meanings when comparing enrollment, lesson completion, and fee summaries.</p></section><section class="portal-panel portal-section portal-added-section"><h2>Export review</h2><p>Check the source, filters, and date window before sharing a report; remove personal details that are not required.</p></section><span data-added-sections="v1" hidden></span></main></div></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Operational Reports in the DrivePro administration portal.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#1b232b">
+<title>Reports &amp; Analytics | DrivePro Administration</title>
+<link rel="icon" href="assets/icons/drivepro-mark.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/pages.css">
+<link rel="stylesheet" href="css/dashboard.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/palette.css">
+<link rel="stylesheet" href="css/navigation.css">
+<script src="js/business-config.js" defer></script>
+<script src="js/dashboard-shell.js" defer></script>
+<script src="js/main.js" defer></script>
+</head>
+<body data-page="admin-reports" data-portal-role="admin">
+<div class="portal-layout admin-portal">
+  <aside class="portal-sidebar" id="portalSidebar"></aside>
+  <main class="portal-main">
+    <div class="portal-topbar" id="portalTopbar"></div>
+    <p class="notice-banner" role="note">These figures and comparisons are not live and have not been verified as business records.</p>
+
+    <header class="portal-welcome">
+      <div>
+        <p class="eyebrow">OPERATIONAL ANALYTICS</p>
+        <h1>School Performance &amp; Reports</h1>
+        <p>Comprehensive data on first-time test pass rates, instructor utilization, average hours to pass, and student feedback.</p>
+      </div>
+      <span class="portal-period"><span class="portal-status-dot"></span>2026 Annual Performance Report</span>
+    </header>
+
+    <!-- Key Report Cards -->
+    <section class="portal-grid-3">
+      <article class="portal-panel">
+        <h2 class="portal-panel-title">First-Time Pass Rate</h2>
+        <strong class="portal-kpi-value" style="font-size:26px; color:#2b6640;">98.4%</strong>
+        <p class="portal-copy" style="margin-top:6px;">National average: 48.2%. DrivePro leads the regional testing district by +50.2%.</p>
+      </article>
+
+      <article class="portal-panel">
+        <h2 class="portal-panel-title">Average Lessons to Pass</h2>
+        <strong class="portal-kpi-value" style="font-size:26px;">22.4 Hours</strong>
+        <p class="portal-copy" style="margin-top:6px;">Learners pass 14 hours faster than the national average (45 hours) due to structured mock test simulations.</p>
+      </article>
+
+      <article class="portal-panel">
+        <h2 class="portal-panel-title">Fleet Utilization</h2>
+        <strong class="portal-kpi-value" style="font-size:26px;">92.5%</strong>
+        <p class="portal-copy" style="margin-top:6px;">Dual-control cars active 6.8 hours daily across weekday and weekend time slots.</p>
+      </article>
+    </section>
+
+    <!-- Breakdown Table -->
+    <section class="portal-section">
+      <div class="portal-section-heading">
+        <div>
+          <h2>Pass Rate Breakdown by License Category</h2>
+          <p>YTD 2026 official test results.</p>
+        </div>
+      </div>
+
+      <div class="portal-table-wrap">
+        <table class="portal-table">
+          <thead>
+            <tr>
+              <th scope="col">License Category</th>
+              <th scope="col">Total Candidates Tested</th>
+              <th scope="col">First-Time Passes</th>
+              <th scope="col">Pass Rate (%)</th>
+              <th scope="col">Average Faults per Test</th>
+              <th scope="col">Regional Benchmark</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Class D · Automatic (Car)</strong></td>
+              <td>78 Candidates</td>
+              <td>77 Passed</td>
+              <td><strong style="color:#2b6640;">98.7%</strong></td>
+              <td>1.8 Minor Faults</td>
+              <td>51.4%</td>
+            </tr>
+            <tr>
+              <td><strong>Class D · Manual (Car)</strong></td>
+              <td>54 Candidates</td>
+              <td>53 Passed</td>
+              <td><strong style="color:#2b6640;">98.1%</strong></td>
+              <td>2.1 Minor Faults</td>
+              <td>47.8%</td>
+            </tr>
+            <tr>
+              <td><strong>Class M · Motorcycle (CBT / A2)</strong></td>
+              <td>42 Candidates</td>
+              <td>41 Certified</td>
+              <td><strong style="color:#2b6640;">97.6%</strong></td>
+              <td>0.9 Minor Faults</td>
+              <td>68.2%</td>
+            </tr>
+            <tr>
+              <td><strong>Commercial &amp; Delivery Van (Class C1)</strong></td>
+              <td>26 Candidates</td>
+              <td>26 Passed</td>
+              <td><strong style="color:#2b6640;">100.0%</strong></td>
+              <td>1.2 Minor Faults</td>
+              <td>58.9%</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Summary Observations -->
+    <section class="portal-grid-2 portal-section">
+      <article class="portal-panel portal-surface-sage">
+        <h2 class="portal-panel-title">Common Minor Fault Analysis</h2>
+        <p class="portal-copy">Top examiner observations during mock tests: (1) Mirror checks before signalling, (2) Positioning on multi-lane roundabout exits, (3) Appropriate speed approaching zebra crossings. Instructors dedicate targeted drills to these 3 areas.</p>
+      </article>
+
+      <article class="portal-panel portal-surface-blue">
+        <h2 class="portal-panel-title">Examiner Route Familiarity</h2>
+        <p class="portal-copy">All students complete at least 2 full mock test simulations covering the 6 most common test routes used by local examiners from the main testing center.</p>
+      </article>
+    </section>
+  </main>
+</div>
+</body>
+</html>

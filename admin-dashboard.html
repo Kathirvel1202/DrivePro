@@ -1,1 +1,204 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Overview in the DrivePro administration portal."><meta name="theme-color" content="#1b232b"><title>Overview | DrivePro Administration</title><link rel="icon" href="assets/icons/drivepro-mark.svg" type="image/svg+xml"><link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/components.css"><link rel="stylesheet" href="css/pages.css"><link rel="stylesheet" href="css/dashboard.css"><link rel="stylesheet" href="css/responsive.css"><link rel="stylesheet" href="css/palette.css"><link rel="stylesheet" href="css/navigation.css"><script src="js/dashboard-shell.js" defer></script><script src="js/main.js" defer></script></head><body data-page="admin-dashboard" data-portal-role="admin"><div class="portal-layout admin-portal"><aside class="portal-sidebar" id="portalSidebar"></aside><main class="portal-main"><div class="portal-topbar" id="portalTopbar"></div><header class="portal-welcome"><div><p class="eyebrow">SCHOOL OPERATIONS</p><h1>Overview</h1><p>Navigate school operations and review areas awaiting connected, verified records.</p></div><span class="portal-period"><span class="portal-status-dot"></span>School operations</span></header><section class="portal-grid-3"><article class="portal-panel portal-summary-card"><span class="portal-kpi-icon" aria-hidden="true">♙</span><h2>Student Management</h2><p>Review student enrolment and account information.</p><a href="admin-students.html">Open section →</a><span class="portal-kpi-note">Records are not connected</span></article><article class="portal-panel portal-summary-card"><span class="portal-kpi-icon" aria-hidden="true">♧</span><h2>Instructor Management</h2><p>Review verified instructor profiles and availability.</p><a href="admin-instructors.html">Open section →</a><span class="portal-kpi-note">Records are not connected</span></article><article class="portal-panel portal-summary-card"><span class="portal-kpi-icon" aria-hidden="true">▤</span><h2>Course Management</h2><p>Review the course catalogue and requirements.</p><a href="admin-courses.html">Open section →</a><span class="portal-kpi-note">Records are not connected</span></article><article class="portal-panel portal-summary-card"><span class="portal-kpi-icon" aria-hidden="true">◷</span><h2>Lesson Scheduling</h2><p>Review schedules and resource availability.</p><a href="admin-scheduling.html">Open section →</a><span class="portal-kpi-note">Records are not connected</span></article><article class="portal-panel portal-summary-card"><span class="portal-kpi-icon" aria-hidden="true">▣</span><h2>Vehicle Management</h2><p>Review fleet and maintenance information.</p><a href="admin-vehicles.html">Open section →</a><span class="portal-kpi-note">Records are not connected</span></article><article class="portal-panel portal-summary-card"><span class="portal-kpi-icon" aria-hidden="true">₹</span><h2>Fees & Invoices</h2><p>Review billing records from a secure service.</p><a href="admin-fees.html">Open section →</a><span class="portal-kpi-note">Records are not connected</span></article><article class="portal-panel portal-summary-card"><span class="portal-kpi-icon" aria-hidden="true">▥</span><h2>Reports</h2><p>Prepare summaries from verified records.</p><a href="admin-reports.html">Open section →</a><span class="portal-kpi-note">Records are not connected</span></article><article class="portal-panel portal-summary-card"><span class="portal-kpi-icon" aria-hidden="true">⚙</span><h2>Account Settings</h2><p>Review administrative preferences.</p><a href="admin-settings.html">Open section →</a><span class="portal-kpi-note">Records are not connected</span></article></section><section class="portal-section portal-panel portal-surface-sage"><h2 class="portal-panel-title">Administrative actions</h2><p class="portal-copy">Management changes, bookings, invoices, and reports require an authorised school service. This interface does not create or update operational records.</p><div class="portal-action-row"><a class="portal-secondary-link" href="admin-students.html">Student directory</a><a class="portal-secondary-link" href="admin-scheduling.html">Lesson schedule</a><a class="portal-secondary-link" href="admin-reports.html">Reports</a></div></section><section class="portal-panel portal-section portal-added-section"><h2>Enrollment review</h2><p>Check requests against prerequisites and assign the correct license pathway.</p></section><section class="portal-panel portal-section portal-added-section"><h2>Instructor coverage</h2><p>Compare teaching capacity with requested lesson times and review qualifications before assigning a session.</p></section><section class="portal-panel portal-section portal-added-section"><h2>Operational handover</h2><p>Record schedule changes, vehicle readiness, and fee follow-ups so the next administrator can act.</p></section><span data-added-sections="v1" hidden></span></main></div></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="School Operations Overview in the DrivePro administration portal.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#1b232b">
+<title>Admin Overview | DrivePro Administration</title>
+<link rel="icon" href="assets/icons/drivepro-mark.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/pages.css">
+<link rel="stylesheet" href="css/dashboard.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/palette.css">
+<link rel="stylesheet" href="css/navigation.css">
+<script src="js/business-config.js" defer></script>
+<script src="js/dashboard-shell.js" defer></script>
+<script src="js/main.js" defer></script>
+</head>
+<body data-page="admin-dashboard" data-portal-role="admin">
+<div class="portal-layout admin-portal">
+  <aside class="portal-sidebar" id="portalSidebar"></aside>
+  <main class="portal-main">
+    <div class="portal-topbar" id="portalTopbar"></div>
+    <p class="notice-banner" role="note">These figures are not live and have not been verified as business records.</p>
+    
+    <header class="portal-welcome">
+      <div>
+        <p class="eyebrow">SCHOOL OPERATIONS DASHBOARD</p>
+        <h1>Operations Overview</h1>
+        <p>Live summary of active learner enrollments, instructor utilization, dual-control fleet readiness, and road test pass rates.</p>
+      </div>
+      <span class="portal-period"><span class="portal-status-dot"></span>School operations live</span>
+    </header>
+
+    <!-- KPI Grid -->
+    <section class="portal-kpi-grid" aria-label="School Metrics">
+      <article class="portal-kpi">
+        <div class="portal-kpi-top">
+          <span class="portal-kpi-label">Active Learners</span>
+          <span class="portal-kpi-icon">&#9817;</span>
+        </div>
+        <strong class="portal-kpi-value">142 Students</strong>
+        <span class="portal-kpi-note">+24 new enrollments this month</span>
+      </article>
+
+      <article class="portal-kpi">
+        <div class="portal-kpi-top">
+          <span class="portal-kpi-label">Certified Instructors</span>
+          <span class="portal-kpi-icon">&#9827;</span>
+        </div>
+        <strong class="portal-kpi-value">6 Active (100%)</strong>
+        <span class="portal-kpi-note">All Grade-A &amp; MSF certified</span>
+      </article>
+
+      <article class="portal-kpi">
+        <div class="portal-kpi-top">
+          <span class="portal-kpi-label">First-Time Pass Rate</span>
+          <span class="portal-kpi-icon">&#9733;</span>
+        </div>
+        <strong class="portal-kpi-value">98.4%</strong>
+        <span class="portal-kpi-note">State licensing exam benchmark</span>
+      </article>
+
+      <article class="portal-kpi">
+        <div class="portal-kpi-top">
+          <span class="portal-kpi-label">Fleet Readiness</span>
+          <span class="portal-kpi-icon">&#9635;</span>
+        </div>
+        <strong class="portal-kpi-value">6/6 Dual-Control</strong>
+        <span class="portal-kpi-note">100% inspected &amp; ready</span>
+      </article>
+    </section>
+
+    <!-- Operational Sections Grid -->
+    <section class="portal-grid-3">
+      <article class="portal-panel portal-summary-card">
+        <span class="portal-kpi-icon">&#9817;</span>
+        <h2>Student Management</h2>
+        <p>Manage student records, permit verifications, license pathways, and training progress.</p>
+        <a href="admin-students.html">Open Student Directory &rarr;</a>
+        <span class="portal-kpi-note">142 active learner profiles</span>
+      </article>
+
+      <article class="portal-panel portal-summary-card">
+        <span class="portal-kpi-icon">&#9827;</span>
+        <h2>Instructor Management</h2>
+        <p>Review instructor certifications, teaching specialties, student allocations, and ratings.</p>
+        <a href="admin-instructors.html">Open Instructor Directory &rarr;</a>
+        <span class="portal-kpi-note">6 instructors on roster</span>
+      </article>
+
+      <article class="portal-panel portal-summary-card">
+        <span class="portal-kpi-icon">&#9636;</span>
+        <h2>Course Management</h2>
+        <p>Review accredited course syllabus, pricing tiers, eligibility criteria, and hours.</p>
+        <a href="admin-courses.html">Manage Course Catalog &rarr;</a>
+        <span class="portal-kpi-note">8 courses active</span>
+      </article>
+
+      <article class="portal-panel portal-summary-card">
+        <span class="portal-kpi-icon">&#9697;</span>
+        <h2>Lesson Scheduling</h2>
+        <p>Schedule dual-control lessons, manage pickup slots, and assign test-day vehicle bookings.</p>
+        <a href="admin-scheduling.html">Open Lesson Calendar &rarr;</a>
+        <span class="portal-kpi-note">48 lessons scheduled this week</span>
+      </article>
+
+      <article class="portal-panel portal-summary-card">
+        <span class="portal-kpi-icon">&#9635;</span>
+        <h2>Vehicle Management</h2>
+        <p>Inspect dual-pedal safety systems, maintenance logs, insurance renewal, and fuel efficiency.</p>
+        <a href="admin-vehicles.html">Open Vehicle Fleet &rarr;</a>
+        <span class="portal-kpi-note">6 dual-control cars &amp; bikes</span>
+      </article>
+
+      <article class="portal-panel portal-summary-card">
+        <span class="portal-kpi-icon">&#8377;</span>
+        <h2>Fees &amp; Invoices</h2>
+        <p>Track learner payments, installment plans, test vehicle hire fees, and receipts.</p>
+        <a href="admin-fees.html">View Billing Ledger &rarr;</a>
+        <span class="portal-kpi-note">$28,450 Q4 revenue</span>
+      </article>
+    </section>
+
+    <!-- Recent Enrollments Table -->
+    <section class="portal-section">
+      <div class="portal-section-heading">
+        <div>
+          <h2>Recent Enrolments &amp; Progress</h2>
+          <p>Latest learners registered for licensing courses.</p>
+        </div>
+        <a class="portal-secondary-link" href="admin-students.html">View all 142 students &rarr;</a>
+      </div>
+
+      <div class="portal-table-wrap">
+        <table class="portal-table">
+          <thead>
+            <tr>
+              <th scope="col">Learner Name</th>
+              <th scope="col">Course Pathway</th>
+              <th scope="col">Assigned Instructor</th>
+              <th scope="col">In-Car Progress</th>
+              <th scope="col">Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Alex Morgan</strong><br><small style="color:var(--muted)">alex.m@example.com</small></td>
+              <td>Beginner 20h Standard (Class D)</td>
+              <td>David Miller (Manual)</td>
+              <td>12 of 20 Hours (60%)</td>
+              <td><span style="color:#2b6640;font-weight:700;">In Training</span></td>
+            </tr>
+            <tr>
+              <td><strong>Chloe Mitchell</strong><br><small style="color:var(--muted)">chloe.m@example.com</small></td>
+              <td>Automatic Hybrid Suite (Class D)</td>
+              <td>Sarah Jenkins (Auto)</td>
+              <td>18 of 20 Hours (90%)</td>
+              <td><span style="color:#bd8a55;font-weight:700;">Test Scheduled</span></td>
+            </tr>
+            <tr>
+              <td><strong>Liam Turner</strong><br><small style="color:var(--muted)">liam.t@example.com</small></td>
+              <td>Manual Fast-Track Intensive</td>
+              <td>David Miller (Manual)</td>
+              <td>15 of 15 Hours (100%)</td>
+              <td><span style="color:#2b6640;font-weight:700;">Passed 1st Time &#10003;</span></td>
+            </tr>
+            <tr>
+              <td><strong>Carlos Rodriguez</strong><br><small style="color:var(--muted)">carlos.r@example.com</small></td>
+              <td>Motorcycle CBT (Class M)</td>
+              <td>Marcus Vance (Bike)</td>
+              <td>Full Day Practical (100%)</td>
+              <td><span style="color:#2b6640;font-weight:700;">Certified &#10003;</span></td>
+            </tr>
+            <tr>
+              <td><strong>Emma Watson</strong><br><small style="color:var(--muted)">emma.w@example.com</small></td>
+              <td>Fast-Track Intensive (Class D)</td>
+              <td>James Thornton (Auto)</td>
+              <td>4 of 10 Hours (40%)</td>
+              <td><span style="color:#2b6640;font-weight:700;">In Training</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Operational Handover Checklist -->
+    <section class="portal-panel portal-section portal-surface-sage">
+      <h2 class="portal-panel-title">Operational Status &amp; Daily Handover</h2>
+      <p class="portal-copy">All dual-control safety systems, student permits, and examiner schedules are verified for today's active lessons. Doorstep pickup dispatch is operating normally across all sectors.</p>
+      <div class="portal-action-row">
+        <a class="portal-secondary-link" href="admin-students.html">Student Directory</a>
+        <a class="portal-secondary-link" href="admin-scheduling.html">Lesson Schedule</a>
+        <a class="portal-secondary-link" href="admin-vehicles.html">Vehicle Fleet</a>
+        <a class="portal-secondary-link" href="admin-reports.html">Reports &amp; KPIs</a>
+      </div>
+    </section>
+  </main>
+</div>
+</body>
+</html>

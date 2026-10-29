@@ -1,6 +1,7 @@
 (() => {
   const body = document.body;
   if (!body.dataset.portalRole) return;
+  const scrollBehavior = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
 
   const configs = {
     'student-dashboard': { title: 'Personal notes', help: 'Keep notes about your learning plan.', collection: 'student-notes', fields: [['title','Note title','text',true],['category','Category','select',['Course','Lesson','Progress','Account']],['notes','Notes','text',true]], filter: 'category' },
@@ -20,12 +21,92 @@
     ['admin-students','Students'],['admin-instructors','Instructors'],['admin-courses','Courses'],
     ['admin-scheduling','Lessons'],['admin-vehicles','Vehicles'],['admin-fees','Fees and invoices'],
   ];
+  const defaultStore = {
+    'admin-students': [
+      { id: 'std-1', name: 'Alex Morgan', email: 'alex.m@example.com', phone: '(555) 392-1084', enrollment: 'Enrolled', course: 'Beginner Car 20h Standard', status: 'Active' },
+      { id: 'std-2', name: 'Chloe Mitchell', email: 'chloe.m@example.com', phone: '(555) 782-9301', enrollment: 'Enrolled', course: 'Automatic Hybrid Suite', status: 'Active' },
+      { id: 'std-3', name: 'Liam Turner', email: 'liam.t@example.com', phone: '(555) 441-2910', enrollment: 'Completed', course: 'Fast-Track Intensive (Class D)', status: 'Active' },
+      { id: 'std-4', name: 'Carlos Rodriguez', email: 'carlos.r@example.com', phone: '(555) 602-1829', enrollment: 'Enrolled', course: 'Motorcycle CBT (Class M)', status: 'Active' },
+      { id: 'std-5', name: 'Emma Watson', email: 'emma.w@example.com', phone: '(555) 819-2041', enrollment: 'Enrolled', course: '10-Hour Fast-Track Prep', status: 'Active' }
+    ],
+    'admin-instructors': [
+      { id: 'ins-1', name: 'David Miller', email: 'david.m@driveproacademy.com', specialisation: 'Car (Manual)', qualifications: 'State Master Instructor, Advanced Safety Gold', vehicleCategories: 'Class D (Manual)', availability: 'Available' },
+      { id: 'ins-2', name: 'Sarah Jenkins', email: 'sarah.j@driveproacademy.com', specialisation: 'Car (Automatic)', qualifications: 'State Certified Instructor, EV Specialist', vehicleCategories: 'Class D (Auto)', availability: 'Available' },
+      { id: 'ins-3', name: 'Marcus Vance', email: 'marcus.v@driveproacademy.com', specialisation: 'Motorcycle', qualifications: 'State Certified Motorcycle Instructor (MSF)', vehicleCategories: 'Class M (Motorcycle)', availability: 'Available' },
+      { id: 'ins-4', name: 'Elena Rostova', email: 'elena.r@driveproacademy.com', specialisation: 'Defensive & Refresher', qualifications: 'Advanced Police Driving Cert', vehicleCategories: 'Class D, Refresher', availability: 'Available' },
+      { id: 'ins-5', name: 'James Thornton', email: 'james.t@driveproacademy.com', specialisation: 'Nervous Beginners', qualifications: 'Clinical Patient Coaching', vehicleCategories: 'Class D (Dual-Control)', availability: 'Available' },
+      { id: 'ins-6', name: 'Priya Sharma', email: 'priya.s@driveproacademy.com', specialisation: 'Commercial Fleet', qualifications: 'Commercial Driver Senior Instructor', vehicleCategories: 'Class C1 (Commercial)', availability: 'Available' }
+    ],
+    'admin-courses': [
+      { id: 'crs-1', course: 'Beginner Car 20h Standard', license: 'Class D (Manual)', eligibility: 'Age 17+, Provisional Permit', theoryHours: 10, practicalHours: 20, duration: '2-4 Weeks', price: 750, status: 'Available' },
+      { id: 'crs-2', course: 'Automatic Hybrid Suite (20h)', license: 'Class D (Automatic)', eligibility: 'Age 17+, Provisional Permit', theoryHours: 10, practicalHours: 20, duration: '2-4 Weeks', price: 790, status: 'Available' },
+      { id: 'crs-3', course: 'Fast-Track Intensive (15h)', license: 'Class D', eligibility: 'Age 17+, Theory Passed', theoryHours: 6, practicalHours: 15, duration: '1 Week', price: 620, status: 'Available' },
+      { id: 'crs-4', course: 'Motorcycle CBT Course', license: 'Class M', eligibility: 'Age 16+', theoryHours: 4, practicalHours: 8, duration: '1 Day', price: 195, status: 'Available' },
+      { id: 'crs-5', course: 'Full Motorcycle License (Class M)', license: 'Class M', eligibility: 'Age 18+, Permit or Skills Certificate', theoryHours: 8, practicalHours: 16, duration: '3-5 Days', price: 680, status: 'Available' },
+      { id: 'crs-6', course: 'Defensive Driver Certification', license: 'Class D / Commercial', eligibility: 'Full License Holder', theoryHours: 6, practicalHours: 6, duration: '2 Days', price: 280, status: 'Available' },
+      { id: 'crs-7', course: 'License Refresher Course (6h)', license: 'Class D', eligibility: 'Full License Holder', theoryHours: 2, practicalHours: 6, duration: '3 Days', price: 260, status: 'Available' },
+      { id: 'crs-8', course: 'Commercial Delivery Van Training', license: 'Class C1', eligibility: 'Full Class D License', theoryHours: 8, practicalHours: 14, duration: '1 Week', price: 580, status: 'Available' }
+    ],
+    'admin-scheduling': [
+      { id: 'sch-1', date: new Date(Date.now() + 86400000).toISOString().split('T')[0], time: '09:00', student: 'Alex Morgan', instructor: 'David Miller', vehicle: 'VW Golf (DP24-GLF)', duration: 120, status: 'Scheduled' },
+      { id: 'sch-2', date: new Date(Date.now() + 86400000).toISOString().split('T')[0], time: '12:00', student: 'Chloe Mitchell', instructor: 'Sarah Jenkins', vehicle: 'Toyota Corolla (DP24-AUT)', duration: 120, status: 'Scheduled' },
+      { id: 'sch-3', date: new Date(Date.now() + 86400000).toISOString().split('T')[0], time: '15:00', student: 'Liam Turner', instructor: 'David Miller', vehicle: 'VW Golf (DP24-GLF)', duration: 120, status: 'Scheduled' },
+      { id: 'sch-4', date: new Date(Date.now() + 172800000).toISOString().split('T')[0], time: '10:00', student: 'Carlos Rodriguez', instructor: 'Marcus Vance', vehicle: 'Yamaha MT-07 (DP23-MTR)', duration: 240, status: 'Scheduled' },
+      { id: 'sch-5', date: new Date(Date.now() + 172800000).toISOString().split('T')[0], time: '14:00', student: 'Emma Watson', instructor: 'James Thornton', vehicle: 'Ford Puma (DP23-AUT)', duration: 120, status: 'Scheduled' }
+    ],
+    'admin-vehicles': [
+      { id: 'veh-1', registration: 'DP24-GLF', category: 'Class D Dual-Control Car', transmission: 'Manual', availability: 'Assigned', maintenance: '2024 VW Golf 1.5 TSI • Dual He-Man Pedals' },
+      { id: 'veh-2', registration: 'DP24-AUT', category: 'Class D Dual-Control Car', transmission: 'Automatic', availability: 'Available', maintenance: '2024 Toyota Corolla Hybrid • Dual Controls' },
+      { id: 'veh-3', registration: 'DP23-MTR', category: 'Class M Training Motorcycle', transmission: 'Manual', availability: 'Available', maintenance: '2023 Yamaha MT-07 ABS • Crash Cages' },
+      { id: 'veh-4', registration: 'DP23-PMA', category: 'Class D Dual-Control Car', transmission: 'Manual', availability: 'Available', maintenance: '2023 Ford Fiesta EcoBoost • Dual Controls' },
+      { id: 'veh-5', registration: 'DP24-EV1', category: 'Class D Dual-Control Car', transmission: 'Automatic', availability: 'Available', maintenance: '2024 Tesla Model 3 • Dual Controls' },
+      { id: 'veh-6', registration: 'DP22-VAN', category: 'Class C1 Commercial Delivery Van', transmission: 'Manual', availability: 'Available', maintenance: '2022 Ford Transit Custom 300' }
+    ],
+    'admin-fees': [
+      { id: 'fee-1', type: 'Invoice', reference: 'INV-2026-1042', student: 'Alex Morgan', date: '2026-10-12', description: 'Beginner Car 20h Standard Package', amount: 750, status: 'Paid' },
+      { id: 'fee-2', type: 'Invoice', reference: 'INV-2026-1043', student: 'Chloe Mitchell', date: '2026-10-14', description: 'Automatic Hybrid Suite (20h)', amount: 790, status: 'Paid' },
+      { id: 'fee-3', type: 'Invoice', reference: 'INV-2026-1044', student: 'Liam Turner', date: '2026-10-16', description: 'Fast-Track Intensive (Class D)', amount: 620, status: 'Paid' },
+      { id: 'fee-4', type: 'Invoice', reference: 'INV-2026-1045', student: 'Carlos Rodriguez', date: '2026-10-18', description: 'Motorcycle CBT Course', amount: 195, status: 'Paid' },
+      { id: 'fee-5', type: 'Invoice', reference: 'INV-2026-1046', student: 'Emma Watson', date: '2026-10-20', description: '10-Hour Fast-Track Prep', amount: 450, status: 'Due' }
+    ],
+    'student-courses': [
+      { id: 'sc-1', course: 'Beginner Car 20-Hour Standard Suite', license: 'Class D (Manual)', status: 'Enrolled', notes: '12 of 20 hours completed with David Miller. Next: Roundabouts & Priority.' },
+      { id: 'sc-2', course: 'Official DMV Practical Road Test Package', license: 'Practical Test', status: 'Enrolled', notes: 'Scheduled for late November with school VW Golf (#DP24-GLF).' }
+    ],
+    'student-lessons': [
+      { id: 'sl-1', date: new Date(Date.now() + 86400000).toISOString().split('T')[0], time: '09:00', duration: 120, instructor: 'David Miller', status: 'Scheduled', notes: 'Roundabouts, Multi-lane entry, and Spiral markings' },
+      { id: 'sl-2', date: new Date(Date.now() + 345600000).toISOString().split('T')[0], time: '10:00', duration: 120, instructor: 'David Miller', status: 'Scheduled', notes: 'Parallel Bay Parking & Emergency Stop' },
+      { id: 'sl-3', date: '2026-10-26', time: '09:00', duration: 120, instructor: 'David Miller', status: 'Completed', notes: 'Mastered emerging from minor to major junctions with good observations.' }
+    ],
+    'student-progress': [
+      { id: 'sp-1', date: '2026-10-26', type: 'Practical', hours: 2, notes: 'Mastered emerging into busy traffic without hesitation. Good clutch control.' },
+      { id: 'sp-2', date: '2026-10-22', type: 'Practical', hours: 2, notes: 'Hill starts on 15% gradient with handbrake. Zero rollback.' },
+      { id: 'sp-3', date: '2026-10-18', type: 'Practical', hours: 2, notes: 'Cockpit drill, blind-spot checks, smooth gear shifting 1-3.' }
+    ],
+    'student-fees': [
+      { id: 'sf-1', date: '2026-10-12', reference: 'INV-2026-1042', description: 'Beginner Car 20h Standard Package (Class D Manual)', amount: 750, status: 'Paid' },
+      { id: 'sf-2', date: '2026-10-22', reference: 'INV-2026-1088', description: 'DMV Practical Road Test Car Hire & Warmup Drive', amount: 90, status: 'Paid' }
+    ],
+    'admin-actions': [
+      { id: 'aa-1', title: 'Inspect DP24-GLF Dual-Controls', area: 'Vehicles', status: 'Complete', notes: 'He-Man dual pedal cables adjusted and lubricated.' },
+      { id: 'aa-2', title: 'Alex Morgan Mock Driving Test', area: 'Scheduling', status: 'In progress', notes: 'Target route 3 with Senior Instructor David Miller.' }
+    ],
+    'student-notes': [
+      { id: 'sn-1', title: 'Roundabout Lane Positioning', category: 'Lesson', notes: 'Remember to check left mirror and blind spot before indicating to leave roundabout at second exit.' }
+    ]
+  };
   let store = {};
   try { store = JSON.parse(localStorage.getItem('drivepro-dashboard-workspace') || '{}') || {}; } catch { store = {}; }
+  for (const [key, items] of Object.entries(defaultStore)) {
+    if (!Array.isArray(store[key]) || store[key].length === 0) {
+      store[key] = items;
+    }
+  }
   const saveStore = () => {
     try { localStorage.setItem('drivepro-dashboard-workspace', JSON.stringify(store)); return true; }
     catch { return false; }
   };
+  saveStore();
   const escapeHtml = value => String(value ?? '').replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
   const makeId = () => globalThis.crypto?.randomUUID?.() || `${Date.now()}-${Math.random().toString(36).slice(2)}`;
   const addField = ([key,label,type,extra]) => {
@@ -109,7 +190,7 @@
     rows.addEventListener('click',event=>{
       const edit=event.target.closest('[data-edit]'),remove=event.target.closest('[data-remove]');if(!edit&&!remove)return;
       const list=store[config.collection]||[];const record=list.find(entry=>entry.id===(edit||remove).dataset[edit?'edit':'remove']);if(!record)return;
-      if(edit){for(const [key] of config.fields)if(form.elements[key])form.elements[key].value=record[key]||'';form.elements.id.value=record.id;form.querySelector('[type="submit"]').textContent='Save changes';section.querySelector('[data-cancel-edit]').hidden=false;form.scrollIntoView({behavior:'smooth',block:'center'});}
+      if(edit){for(const [key] of config.fields)if(form.elements[key])form.elements[key].value=record[key]||'';form.elements.id.value=record.id;form.querySelector('[type="submit"]').textContent='Save changes';section.querySelector('[data-cancel-edit]').hidden=false;form.scrollIntoView({behavior:scrollBehavior,block:'center'});}
       else{store[config.collection]=list.filter(entry=>entry.id!==record.id);saveStore();render();}
     });
     search.addEventListener('input',render);searchLegacy?.addEventListener('input',render);filter.addEventListener('change',render);legacyFilters.forEach(([el])=>el.addEventListener('change',render));
@@ -164,11 +245,11 @@
   if(page==='admin-scheduling'){
     const buttons=[...document.querySelectorAll('.portal-report-controls button')];
     buttons.filter(button=>['Daily','Weekly','Monthly'].includes(button.textContent.trim())).forEach(button=>{button.disabled=false;button.setAttribute('aria-pressed',String(button.textContent.trim()==='Monthly'));button.addEventListener('click',()=>{buttons.forEach(other=>other.setAttribute('aria-pressed',String(other===button)));document.querySelector('.portal-workspace').dataset.calendarView=button.textContent.trim();let note=document.querySelector('.portal-report-controls [data-view-note]');if(!note){note=document.createElement('span');note.dataset.viewNote='';document.querySelector('.portal-report-controls')?.append(note);}if(note)note.textContent=`${button.textContent.trim()} view selected.`;document.querySelector('.portal-workspace [data-search]')?.dispatchEvent(new Event('input'));});});
-    const actions=buttons.find(button=>button.textContent.toLowerCase().includes('schedule lesson'));if(actions){actions.disabled=false;actions.addEventListener('click',()=>document.getElementById('workspace')?.scrollIntoView({behavior:'smooth'}));}
+    const actions=buttons.find(button=>button.textContent.toLowerCase().includes('schedule lesson'));if(actions){actions.disabled=false;actions.addEventListener('click',()=>document.getElementById('workspace')?.scrollIntoView({behavior:scrollBehavior}));}
   }
-  document.querySelectorAll('.portal-disabled-action').forEach(button=>{button.disabled=false;if(page==='admin-fees'&&/unavailable/i.test(button.textContent))button.textContent='Add refund request';if(page==='admin-courses'&&/unavailable/i.test(button.textContent))button.textContent='Manage course settings';button.addEventListener('click',()=>{const destination=page==='admin-instructors'?'admin-scheduling.html#workspace':page==='admin-vehicles'?'admin-scheduling.html#workspace':page==='admin-fees'?'admin-fees.html#workspace':'#workspace';if(destination.startsWith('#'))document.querySelector(destination)?.scrollIntoView({behavior:'smooth',block:'center'});else location.href=destination;});});
+  document.querySelectorAll('.portal-disabled-action').forEach(button=>{button.disabled=false;if(page==='admin-fees'&&/unavailable/i.test(button.textContent))button.textContent='Add refund request';if(page==='admin-courses'&&/unavailable/i.test(button.textContent))button.textContent='Manage course settings';button.addEventListener('click',()=>{const destination=page==='admin-instructors'?'admin-scheduling.html#workspace':page==='admin-vehicles'?'admin-scheduling.html#workspace':page==='admin-fees'?'admin-fees.html#workspace':'#workspace';if(destination.startsWith('#'))document.querySelector(destination)?.scrollIntoView({behavior:scrollBehavior,block:'center'});else location.href=destination;});});
   document.querySelectorAll('.portal-report-controls button:disabled').forEach(button=>button.disabled=false);
   document.querySelectorAll('.portal-report-controls input:disabled,.portal-report-controls select:disabled').forEach(control=>control.disabled=false);
-  const addCourse=document.querySelector('.portal-report-controls button');if(page==='admin-courses'&&addCourse)addCourse.addEventListener('click',()=>document.getElementById('workspace')?.scrollIntoView({behavior:'smooth',block:'center'}));
+  const addCourse=document.querySelector('.portal-report-controls button');if(page==='admin-courses'&&addCourse)addCourse.addEventListener('click',()=>document.getElementById('workspace')?.scrollIntoView({behavior:scrollBehavior,block:'center'}));
   document.querySelectorAll('.portal-report-controls [type="search"]').forEach(input=>{input.removeAttribute('disabled');});
 })();

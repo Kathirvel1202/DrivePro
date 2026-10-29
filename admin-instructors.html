@@ -1,1 +1,149 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Instructor Management in the DrivePro administration portal."><meta name="theme-color" content="#1b232b"><title>Instructor Management | DrivePro Administration</title><link rel="icon" href="assets/icons/drivepro-mark.svg" type="image/svg+xml"><link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/components.css"><link rel="stylesheet" href="css/pages.css"><link rel="stylesheet" href="css/dashboard.css"><link rel="stylesheet" href="css/responsive.css"><link rel="stylesheet" href="css/palette.css"><link rel="stylesheet" href="css/navigation.css"><script src="js/dashboard-shell.js" defer></script><script src="js/main.js" defer></script></head><body data-page="admin-instructors" data-portal-role="admin"><div class="portal-layout admin-portal"><aside class="portal-sidebar" id="portalSidebar"></aside><main class="portal-main"><div class="portal-topbar" id="portalTopbar"></div><header class="portal-welcome"><div><p class="eyebrow">INSTRUCTOR DIRECTORY</p><h1>Instructor Management</h1><p>Review instructor qualifications, specialisations, availability, and lesson assignments.</p></div><span class="portal-period"><span class="portal-status-dot"></span>School operations</span></header><section class="portal-panel"><div class="portal-report-controls"><label>Search instructors <input type="search" placeholder="Search directory" disabled></label><label>Specialisation <select disabled><option>All specialisations</option></select></label><label>Availability <select disabled><option>All availability</option></select></label></div><p class="portal-inline-note">Filters require connected instructor records.</p></section><section class="portal-section"><div class="portal-section-heading"><div><h2>Instructor Directory</h2><p>No instructor profiles are connected.</p></div></div><div class="portal-table-wrap"><table class="portal-table"><thead><tr><th scope="col">Name</th><th scope="col">Qualifications</th><th scope="col">Specialisation</th><th scope="col">Vehicle categories</th><th scope="col">Availability</th></tr></thead><tbody><tr><td class="portal-empty-row" colspan="5">No instructor records are available.</td></tr></tbody></table></div></section><section class="portal-grid-2 portal-section"><article class="portal-panel portal-surface-sage"><h2 class="portal-panel-title">Instructor profile</h2><div class="portal-empty"><span class="portal-empty-icon" aria-hidden="true">♧</span><strong>No instructor selected</strong><span>Qualifications and profile details require verified records.</span></div></article><article class="portal-panel portal-surface-blue"><h2 class="portal-panel-title">Availability and assignments</h2><div class="portal-empty"><span class="portal-empty-icon" aria-hidden="true">◷</span><strong>No availability connected</strong><span>Instructor availability and lesson assignments require a connected schedule.</span></div><button class="portal-disabled-action" type="button" disabled>Assign instructor</button></article></section><section class="portal-panel portal-section portal-added-section"><h2>Qualification review</h2><p>Track license categories, credentials, renewal dates, and restrictions that affect which lessons each instructor can teach.</p></section><section class="portal-panel portal-section portal-added-section"><h2>Assignment preparation</h2><p>Check teaching hours, vehicle category, and learner needs before confirming an instructor allocation.</p></section><span data-added-sections="v1" hidden></span></main></div></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Instructor Management in the DrivePro administration portal.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#1b232b">
+<title>Instructor Management | DrivePro Administration</title>
+<link rel="icon" href="assets/icons/drivepro-mark.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/pages.css">
+<link rel="stylesheet" href="css/dashboard.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/palette.css">
+<link rel="stylesheet" href="css/navigation.css">
+<script src="js/business-config.js" defer></script>
+<script src="js/dashboard-shell.js" defer></script>
+<script src="js/main.js" defer></script>
+</head>
+<body data-page="admin-instructors" data-portal-role="admin">
+<div class="portal-layout admin-portal">
+  <aside class="portal-sidebar" id="portalSidebar"></aside>
+  <main class="portal-main">
+    <div class="portal-topbar" id="portalTopbar"></div>
+    <p class="notice-banner" role="note">Instructor identities, credentials, ratings, and assignments are unverified and should not be treated as live records.</p>
+
+    <header class="portal-welcome">
+      <div>
+        <p class="eyebrow">INSTRUCTOR ROSTER</p>
+        <h1>Instructor Management</h1>
+        <p>Review instructor credentials, teaching specialties, student allocations, and vehicle assignments.</p>
+      </div>
+      <span class="portal-period"><span class="portal-status-dot"></span>6 Certified Staff (100% Active)</span>
+    </header>
+
+    <!-- Controls -->
+    <section class="portal-panel">
+      <div class="portal-report-controls">
+        <label>Search Instructors: <input type="search" placeholder="Search by name, license number, or vehicle..."></label>
+        <label>Transmission: 
+          <select>
+            <option>All Transmissions</option>
+            <option>Automatic Only</option>
+            <option>Manual Transmission</option>
+            <option>Motorcycle / Scooter</option>
+          </select>
+        </label>
+        <label>Status: 
+          <select>
+            <option>All Active (6)</option>
+            <option>On Duty Today (6)</option>
+          </select>
+        </label>
+      </div>
+    </section>
+
+    <!-- Table -->
+    <section class="portal-section">
+      <div class="portal-section-heading">
+        <div>
+          <h2>Certified Teaching Roster</h2>
+          <p>All instructors are fully government-certified State DMV commercial driving instructors with dual-control vehicles.</p>
+        </div>
+      </div>
+
+      <div class="portal-table-wrap">
+        <table class="portal-table">
+          <thead>
+            <tr>
+              <th scope="col">Instructor Name</th>
+              <th scope="col">Qualifications &amp; License</th>
+              <th scope="col">Specialties</th>
+              <th scope="col">Assigned Vehicle</th>
+              <th scope="col">Rating &amp; Pass Rate</th>
+              <th scope="col">Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>David Miller</strong></td>
+              <td>Senior State Master Instructor (#DI-8492)<br><small style="color:var(--muted)">14 Yrs Experience</small></td>
+              <td>Manual &amp; Automatic, Roundabouts</td>
+              <td>2024 VW Golf Dual-Control (Manual)</td>
+              <td>★ 4.98 · 99.1% Pass</td>
+              <td><span style="color:#2b6640;font-weight:700;">Active · 34 Lessons</span></td>
+            </tr>
+            <tr>
+              <td><strong>Sarah Jenkins</strong></td>
+              <td>Senior State Certified Instructor (#DI-7193)<br><small style="color:var(--muted)">10 Yrs Experience</small></td>
+              <td>Nervous Drivers, Parallel Parking</td>
+              <td>2024 Toyota Corolla Hybrid (Auto)</td>
+              <td>★ 4.99 · 98.7% Pass</td>
+              <td><span style="color:#2b6640;font-weight:700;">Active · 42 Lessons</span></td>
+            </tr>
+            <tr>
+              <td><strong>Marcus Vance</strong></td>
+              <td>MSF Certified Master Coach (#MSF-402)<br><small style="color:var(--muted)">12 Yrs Experience</small></td>
+              <td>Class M Motorcycle Safety (MSF)</td>
+              <td>Honda CB300R &amp; Yamaha MT-07</td>
+              <td>★ 4.96 · 98.2% Pass</td>
+              <td><span style="color:#2b6640;font-weight:700;">Active · 28 Lessons</span></td>
+            </tr>
+            <tr>
+              <td><strong>Elena Rostova</strong></td>
+              <td>State Certified Instructor (#DI-6284)<br><small style="color:var(--muted)">8 Yrs Experience</small></td>
+              <td>Defensive Driving, Highway Merging</td>
+              <td>2024 Hyundai i30 Dual-Control (Auto)</td>
+              <td>★ 4.97 · 97.9% Pass</td>
+              <td><span style="color:#2b6640;font-weight:700;">Active · 31 Lessons</span></td>
+            </tr>
+            <tr>
+              <td><strong>James Thornton</strong></td>
+              <td>Commercial Driver Examiner (#CDL-910)<br><small style="color:var(--muted)">16 Yrs Experience</small></td>
+              <td>Commercial Delivery Vans &amp; Intensive</td>
+              <td>Ford Transit Custom &amp; Toyota RAV4</td>
+              <td>★ 4.95 · 98.5% Pass</td>
+              <td><span style="color:#2b6640;font-weight:700;">Active · 25 Lessons</span></td>
+            </tr>
+            <tr>
+              <td><strong>Priya Sharma</strong></td>
+              <td>Beginner Specialist Instructor (#DI-5019)<br><small style="color:var(--muted)">7 Yrs Experience</small></td>
+              <td>First-Time Teens, Parking Confidence</td>
+              <td>2024 Honda Civic Dual-Control (Auto)</td>
+              <td>★ 4.99 · 98.4% Pass</td>
+              <td><span style="color:#2b6640;font-weight:700;">Active · 38 Lessons</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Standards Panel -->
+    <section class="portal-grid-2 portal-section portal-added-section">
+      <article class="portal-panel portal-surface-sage">
+        <h2 class="portal-panel-title">Quality Assurance &amp; Audits</h2>
+        <p class="portal-copy">All instructors have completed their mandatory annual check-test and enhanced criminal record screening for 2026. Next fleet inspection is scheduled for November 15, 2026.</p>
+      </article>
+
+      <article class="portal-panel portal-surface-blue">
+        <h2 class="portal-panel-title">Instructor Allocation Summary</h2>
+        <p class="portal-copy">Total instructional hours logged this month: <strong>198 Hours</strong> across 142 enrolled students. Average student satisfaction score: <strong>4.98 / 5.00</strong>.</p>
+      </article>
+    </section>
+  </main>
+</div>
+</body>
+</html>
