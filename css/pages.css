@@ -381,25 +381,6 @@
   box-shadow: var(--card-shadow);
   position: relative;
 }
-.tier-card.featured {
-  border-color: var(--orange);
-  box-shadow: 0 16px 40px rgba(216, 117, 0, 0.16);
-  transform: scale(1.02);
-}
-.tier-badge {
-  position: absolute;
-  top: -12px;
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 4px 16px;
-  border-radius: 999px;
-  background: var(--orange);
-  color: #fff;
-  font-size: 11px;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-}
 .tier-card h3 {
   color: var(--brown);
   font: 700 24px/1.2 Georgia, serif;
@@ -608,9 +589,6 @@
   }
   .tier-matrix-grid {
     grid-template-columns: 1fr;
-  }
-  .tier-card.featured {
-    transform: none;
   }
 }
 
