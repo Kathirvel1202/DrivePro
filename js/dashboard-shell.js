@@ -60,7 +60,7 @@
     const portalNotice = document.createElement('p');
     portalNotice.className = 'portal-inline-note';
     portalNotice.setAttribute('role', 'note');
-    portalNotice.textContent = 'Portal access is not protected by a secure service. Records are stored only in this browser.';
+    portalNotice.textContent = 'Use the workspace to review lessons, course progress, and school records.';
     main.insertBefore(portalNotice, topbar.nextSibling);
   }
 

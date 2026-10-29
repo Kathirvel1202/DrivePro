@@ -60,7 +60,7 @@ if (headerSlot) {
           
           <div class="mobile-nav-cta">
             <a class="mobile-book-btn" href="contact.html#book">Book a Driving Lesson</a>
-            <p class="mobile-contact-info">Official contact details are pending owner confirmation.</p>
+            <p class="mobile-contact-info">Explore courses, lesson planning, and school information.</p>
           </div>
         </div>
 
@@ -96,7 +96,7 @@ if (footerSlot) {
           </a>
           <p>Explore lesson formats, course information, and instructor profiles. Confirm current services and availability with the school before making plans.</p>
           
-          <p class="footer-contact-block">Phone, email, address, and business hours will be added after the owner confirms the official details.</p>
+          <p class="footer-contact-block">Browse courses, review common questions, and plan a lesson.</p>
           <nav class="footer-socials" aria-label="Social platforms">
             <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram homepage">
               <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.8" r="1.2" fill="currentColor"/></svg>
@@ -154,7 +154,7 @@ if (footerSlot) {
       <div class="footer-bottom">
         <p>&copy; 2026 DrivePro Driving School &amp; License Training Center. All rights reserved.</p>
         <div>
-          <span>Policies pending publication</span>
+          <span>Student and school resources</span>
           <a href="faq.html">Frequently Asked Questions</a>
           <a href="contact.html">Contact page</a>
         </div>

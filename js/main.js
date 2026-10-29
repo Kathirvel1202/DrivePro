@@ -610,8 +610,8 @@ document.addEventListener('DOMContentLoaded', () => {
           if (statusBox) {
             statusBox.innerHTML = `
               <div class="booking-error-card" role="status">
-                <h4>Booking unavailable</h4>
-                <p>No booking service is connected. Your entries remain in this form and were not saved or sent.</p>
+                <h4>Request not submitted</h4>
+                <p>Your request was not submitted. Please try again later.</p>
               </div>
             `;
             statusBox.scrollIntoView({ behavior: scrollBehavior, block: 'nearest' });
@@ -720,7 +720,7 @@ document.addEventListener('DOMContentLoaded', () => {
         sessionStorage.setItem('drivepro-current-user', JSON.stringify({ email, name: accounts[email]?.name || email.split('@')[0], role: 'student' }));
         location.href = 'student-dashboard.html';
       } catch {
-        if (status) status.textContent = 'Your browser could not save this account. Check browser storage settings and try again.';
+        if (status) status.textContent = 'Your account could not be created. Please try again.';
         isAuthSubmitting = false;
         if (submitBtn) { submitBtn.disabled = false; submitBtn.innerHTML = originalText; }
       }
