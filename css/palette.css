@@ -280,6 +280,16 @@ body:not(.dark-mode) .site-footer .footer-portal-btn:hover {
 .card:focus-within,.step-card:focus-within,.stat-card:focus-within,.quote:focus-within,.dashboard-card:focus-within,.portal-summary-card:focus-within,.portal-kpi:focus-within{transform:translateY(-3px);border-color:var(--orange-dark);box-shadow:0 12px 26px rgba(42,73,68,.13)}
 @media(prefers-reduced-motion:reduce){.card,.step-card,.stat-card,.quote,.dashboard-card,.portal-summary-card,.portal-kpi{transition:none}.card:hover,.card:focus-within,.step-card:hover,.step-card:focus-within,.stat-card:hover,.stat-card:focus-within,.quote:hover,.quote:focus-within,.dashboard-card:hover,.dashboard-card:focus-within,.portal-summary-card:hover,.portal-summary-card:focus-within,.portal-kpi:hover,.portal-kpi:focus-within{transform:none}}
 
+body[data-page="admin-dashboard"] .portal-kpi-grid {
+  margin-top: 24px;
+}
+
+@media (hover: hover) {
+  body[data-page="admin-dashboard"] .portal-kpi:hover {
+    transform: none;
+  }
+}
+
 /* Alternate section surfaces across every page and theme. */
 .section:not(.hero):not(.section-alt){background:var(--section-one)!important;color:var(--ink)}
 .section.section-alt:not(.hero){background:var(--section-two)!important;color:var(--ink)}
