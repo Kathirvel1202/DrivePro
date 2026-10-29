@@ -72,7 +72,6 @@ if (headerSlot) {
           <button class="language-btn" id="directionToggle" type="button" aria-label="Switch to right-to-left direction" aria-pressed="false">LTR</button>
           <span class="nav-separator" aria-hidden="true"></span>
           <a class="login-btn" href="login.html">Login</a>
-          <a class="header-book-btn" href="contact.html#book">Book a Lesson</a>
         </div>
       </nav>
     </header>
