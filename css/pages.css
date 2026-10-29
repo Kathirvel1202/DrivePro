@@ -6,3 +6,491 @@
 #first-lesson + #observation{padding-top:16px}
 
 .outcomes-cta{display:flex;justify-content:center;margin-top:24px}.pricing-guide-card{display:flex;min-height:100%;align-items:stretch}.pricing-guide-card .card-copy{display:flex;width:100%;flex-direction:column;align-items:flex-start}.pricing-guide-card .price-label{margin-top:auto;margin-bottom:14px}.pricing-note{max-width:850px;margin:20px auto 0;color:var(--muted);text-align:center;font-size:14px}.section.dark .step-card{background:var(--surface-raised)}
+
+
+/* ==========================================================================
+   DrivePro Redesign: Course Cards, Instructor Grid, Hero Selector, & Booking Form
+   ========================================================================== */
+
+/* Hero License Finder Widget (Home 1) */
+.hero-finder-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-top: 32px;
+  padding: 16px 20px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.24);
+  backdrop-filter: blur(16px);
+  color: var(--ink);
+  max-width: 820px;
+}
+.hero-finder-item {
+  flex: 1;
+  min-width: 170px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.hero-finder-item label {
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--orange-dark);
+}
+.hero-finder-item select {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid var(--gold-border);
+  border-radius: 10px;
+  background: #fff;
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 600;
+}
+.hero-finder-submit {
+  flex: 0 0 auto;
+  align-self: flex-end;
+  padding: 11px 22px;
+  border-radius: 12px;
+  background: var(--orange);
+  color: #fff;
+  border: 0;
+  font-weight: 700;
+  font-size: 13.5px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.2s, background 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.hero-finder-submit:hover {
+  background: var(--orange-dark);
+  transform: translateY(-2px);
+}
+
+/* Trust Metric Bar */
+.trust-bar {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+  padding: 24px 0;
+}
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 22px;
+  border-radius: 18px;
+  background: var(--surface-raised);
+  border: 1px solid var(--gold-border);
+  box-shadow: var(--card-shadow);
+}
+.trust-icon {
+  display: grid;
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  place-items: center;
+  border-radius: 14px;
+  background: var(--soft-orange);
+  color: var(--orange-dark);
+  font-size: 22px;
+}
+.trust-info strong {
+  display: block;
+  font: 700 24px/1.1 Georgia, serif;
+  color: var(--brown);
+}
+.trust-info span {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* Enhanced Course Card Architecture */
+.course-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--gold-border);
+  border-radius: 20px;
+  background: var(--surface-raised);
+  box-shadow: var(--card-shadow);
+  transition: transform 0.24s, box-shadow 0.24s;
+}
+.course-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 40px rgba(73, 53, 34, 0.12);
+}
+.course-card-thumb-wrap {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  background: #e2e8f0;
+}
+.course-card-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+.course-card:hover .course-card-thumb {
+  transform: scale(1.04);
+}
+.course-license-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  padding: 5px 12px;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.88);
+  backdrop-filter: blur(8px);
+  color: #fbbf24;
+  font-size: 11.5px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.course-card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 22px;
+}
+.course-tag {
+  color: var(--orange-dark);
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 8px;
+}
+.course-title {
+  color: var(--brown);
+  font: 700 21px/1.25 Georgia, serif;
+  margin-bottom: 10px;
+}
+.course-desc {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.55;
+  margin-bottom: 16px;
+}
+.course-specs-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  padding: 12px 0;
+  border-top: 1px solid var(--gold-border);
+  border-bottom: 1px solid var(--gold-border);
+  margin-bottom: 18px;
+  font-size: 12.5px;
+}
+.course-spec-item {
+  display: flex;
+  flex-direction: column;
+}
+.course-spec-item span {
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.course-spec-item strong {
+  color: var(--brown);
+  font-size: 13px;
+  font-weight: 700;
+}
+.course-pricing-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-bottom: 14px;
+}
+.course-price-amount {
+  font: 700 24px/1 Georgia, serif;
+  color: var(--brown);
+}
+.course-price-note {
+  font-size: 12px;
+  color: var(--muted);
+}
+.course-card-actions {
+  display: flex;
+  gap: 10px;
+}
+.course-card-actions .button {
+  flex: 1;
+  padding: 10px 14px;
+  font-size: 13px;
+}
+.course-card-actions .button.outline {
+  flex: 0 0 auto;
+}
+
+/* Instructor Directory Architecture */
+.instructor-profile-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--gold-border);
+  border-radius: 20px;
+  background: var(--surface-raised);
+  box-shadow: var(--card-shadow);
+  transition: transform 0.24s, box-shadow 0.24s;
+}
+.instructor-profile-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(73, 53, 34, 0.12);
+}
+.instructor-photo-wrap {
+  position: relative;
+  width: 100%;
+  height: 290px;
+  background: #e2e8f0;
+  overflow: hidden;
+}
+.instructor-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 25%;
+  transition: transform 0.4s ease;
+}
+.instructor-profile-card:hover .instructor-photo {
+  transform: scale(1.03);
+}
+.instructor-rating-pill {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 11px;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(8px);
+  color: #fbbf24;
+  font-size: 12px;
+  font-weight: 800;
+}
+.instructor-card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 22px;
+}
+.instructor-name {
+  color: var(--brown);
+  font: 700 22px/1.2 Georgia, serif;
+  margin-bottom: 4px;
+}
+.instructor-role {
+  color: var(--orange-dark);
+  font-size: 12.5px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.instructor-meta-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+.instructor-meta-pill {
+  padding: 4px 9px;
+  border-radius: 8px;
+  background: var(--soft-orange);
+  color: var(--orange-dark);
+  font-size: 11.5px;
+  font-weight: 700;
+}
+.instructor-bio {
+  color: var(--muted);
+  font-size: 13.5px;
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+.instructor-vehicle-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 12px;
+  border-radius: 10px;
+  background: var(--cream);
+  border: 1px solid var(--gold-border);
+  font-size: 12px;
+  color: var(--brown);
+  margin-bottom: 18px;
+}
+.instructor-card-action {
+  margin-top: auto;
+}
+.instructor-card-action .button {
+  width: 100%;
+}
+
+/* Home 2 Intensive Matrix Cards */
+.tier-matrix-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  align-items: stretch;
+}
+.tier-card {
+  display: flex;
+  flex-direction: column;
+  padding: 32px 28px;
+  border: 1px solid var(--gold-border);
+  border-radius: 22px;
+  background: var(--surface-raised);
+  box-shadow: var(--card-shadow);
+  position: relative;
+}
+.tier-card.featured {
+  border-color: var(--orange);
+  box-shadow: 0 16px 40px rgba(216, 117, 0, 0.16);
+  transform: scale(1.02);
+}
+.tier-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 4px 16px;
+  border-radius: 999px;
+  background: var(--orange);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.tier-card h3 {
+  color: var(--brown);
+  font: 700 24px/1.2 Georgia, serif;
+  margin-bottom: 8px;
+}
+.tier-card p {
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+.tier-price-row {
+  margin-bottom: 22px;
+}
+.tier-price {
+  font: 700 36px/1 Georgia, serif;
+  color: var(--brown);
+}
+.tier-price-sub {
+  font-size: 13px;
+  color: var(--muted);
+}
+.tier-features {
+  list-style: none;
+  display: grid;
+  gap: 11px;
+  margin-bottom: 26px;
+  flex: 1;
+}
+.tier-features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 13.5px;
+  color: var(--ink);
+}
+.tier-features li::before {
+  content: "✓";
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--soft-orange);
+  color: var(--orange-dark);
+  font-weight: 800;
+  font-size: 11px;
+}
+.tier-card .button {
+  width: 100%;
+}
+
+/* Interactive Booking Form Styling */
+.booking-section-wrap {
+  scroll-margin-top: 100px;
+}
+.booking-steps-nav {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+  border-bottom: 2px solid var(--gold-border);
+  padding-bottom: 12px;
+}
+.booking-step-tab {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--muted);
+  padding: 6px 12px;
+  border-radius: 8px;
+}
+.booking-step-tab.active {
+  background: var(--soft-orange);
+  color: var(--orange-dark);
+}
+.booking-confirmation-card {
+  padding: 24px;
+  border-radius: 16px;
+  background: #edf5ef;
+  border: 1px solid #b7dfc3;
+  color: #2b5639;
+  margin-top: 20px;
+}
+.booking-confirmation-card h4 {
+  font: 700 18px Georgia, serif;
+  margin-bottom: 8px;
+}
+
+/* Responsive adjustments for new components */
+@media (max-width: 1180px) {
+  .trust-bar {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .tier-matrix-grid {
+    grid-template-columns: 1fr;
+  }
+  .tier-card.featured {
+    transform: none;
+  }
+}
+
+@media (max-width: 760px) {
+  .hero-finder-bar {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 16px;
+  }
+  .hero-finder-item {
+    min-width: 100%;
+  }
+  .hero-finder-submit {
+    align-self: stretch;
+    justify-content: center;
+  }
+  .trust-bar {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .course-specs-grid {
+    grid-template-columns: 1fr;
+  }
+}
