@@ -535,6 +535,46 @@ body[data-page="pricing"] .hero.page-hero h1 {
   font-size: clamp(52px, 5vw, 76px);
 }
 
+/* Keep the four training step titles on one line across card layouts. */
+.steps-grid .step-card h3 {
+  white-space: nowrap;
+  font-size: clamp(17px, 1.1vw, 21px);
+  letter-spacing: -0.02em;
+}
+
+.safety-pillars .card-copy h3 {
+  white-space: nowrap;
+  font-size: clamp(17px, 1.1vw, 21px);
+  letter-spacing: -0.02em;
+}
+
+.eligibility-requirements .card-copy h3 {
+  white-space: nowrap;
+  font-size: clamp(14px, 1.5vw, 21px);
+  letter-spacing: -0.02em;
+}
+
+/* Give the nine course cards room to form a balanced three-by-three catalog. */
+#course-catalog > .section-inner {
+  width: min(100%, 1560px);
+}
+
+#course-catalog .card-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+@media (max-width: 900px) {
+  #course-catalog .card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  #course-catalog .card-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 760px) {
   body[data-page="pricing"] .hero.page-hero {
     padding-top: 92px;

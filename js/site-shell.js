@@ -34,7 +34,6 @@ if (headerSlot) {
           <img class="brand-logo" src="assets/icons/drivepro-mark.svg" alt="">
           <div class="brand-text">
             <span class="brand-name">DrivePro</span>
-            <span class="brand-tagline">Driving &amp; License Center</span>
           </div>
         </a>
 
@@ -47,13 +46,13 @@ if (headerSlot) {
             { label: 'Home 1', url: 'index.html', key: 'home' },
             { label: 'Home 2', url: 'home-page-2.html', key: 'home-page-2' }
           ])}
+          ${direct('About Us', 'about.html', 'about')}
           ${direct('Courses', 'courses.html', 'courses')}
           ${direct('Instructors', 'instructors.html', 'instructors')}
           ${direct('Pricing', 'pricing.html', 'pricing')}
-          ${direct('About Us', 'about.html', 'about')}
           ${direct('FAQ', 'faq.html', 'faq')}
           ${direct('Contact', 'contact.html', 'contact')}
-          ${dropdown('Portal', [
+          ${dropdown('Dashboard', [
             { label: 'Student Dashboard', url: 'student-dashboard.html', key: 'student-dashboard' },
             { label: 'Admin Dashboard', url: 'admin-dashboard.html', key: 'admin-dashboard' }
           ])}
@@ -91,7 +90,6 @@ if (footerSlot) {
             <img class="footer-logo" src="assets/icons/drivepro-mark.svg" alt="">
             <div>
               <span class="footer-brand-name">DrivePro</span>
-              <small class="footer-brand-sub">Driving School &amp; License Training Center</small>
             </div>
           </a>
           <p>Explore lesson formats, course information, and instructor profiles. Confirm current services and availability with the school before making plans.</p>
@@ -127,7 +125,7 @@ if (footerSlot) {
           <a href="instructors.html">Instructor Profiles</a>
           <a href="pricing.html">Pricing &amp; Course Packages</a>
           <a href="course-details.html">Flagship Syllabus Details</a>
-          <a href="about.html">About DrivePro Academy</a>
+          <a href="about.html">About DrivePro</a>
           <a href="faq.html">Frequently Asked Questions</a>
           <a href="contact.html#book">Book a Driving Lesson</a>
           <a href="contact.html">Contact &amp; Map Location</a>
@@ -152,7 +150,7 @@ if (footerSlot) {
 
       <!-- Footer Bottom Bar -->
       <div class="footer-bottom">
-        <p>&copy; 2026 DrivePro Driving School &amp; License Training Center. All rights reserved.</p>
+        <p>&copy; 2026 DrivePro. All rights reserved.</p>
         <div>
           <span>Student and school resources</span>
           <a href="faq.html">Frequently Asked Questions</a>
